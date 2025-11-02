@@ -5,6 +5,7 @@ project(Notes VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
@@ -17,6 +18,8 @@ qt_add_qml_module(appNotes
     VERSION 1.0
     QML_FILES
         Main.qml
+        SOURCES NotesManager.h NotesManager.cpp
+        QML_FILES
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -33,6 +36,7 @@ set_target_properties(appNotes PROPERTIES
 target_link_libraries(appNotes
     PRIVATE Qt6::Quick
 )
+target_link_libraries(appNotes PRIVATE Qt6::Core)
 
 include(GNUInstallDirs)
 install(TARGETS appNotes

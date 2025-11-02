@@ -1,0 +1,6 @@
+module Notes
+typeinfo appNotes.qmltypes
+prefer :/qt/qml/Notes/
+Main 1.0 Main.qml
+depends QtQuick
+

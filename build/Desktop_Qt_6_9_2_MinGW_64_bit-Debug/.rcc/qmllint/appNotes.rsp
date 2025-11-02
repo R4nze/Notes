@@ -1,0 +1,10 @@
+--bare
+-I
+C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug
+-I
+D:/Qt/6.9.2/mingw_64/qml
+--resource
+C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/qmake_Notes.qrc
+--resource
+C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/rcc/appNotes_raw_qml_0.qrc
+C:/Users/Me/Documents/GitHub/Notes/Main.qml

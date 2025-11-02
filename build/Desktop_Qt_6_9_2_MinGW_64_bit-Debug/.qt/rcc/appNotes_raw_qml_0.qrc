@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/Notes/">
+    <file alias="Main.qml">C:/Users/Me/Documents/GitHub/Notes/Main.qml</file>
+  </qresource>
+</RCC>
+

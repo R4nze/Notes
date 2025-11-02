@@ -1,0 +1,108 @@
+[
+    {
+        "classes": [
+            {
+                "className": "NotesManager",
+                "lineNumber": 6,
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 0,
+                        "name": "NameOfNote",
+                        "notify": "NameOfNoteChanged",
+                        "read": "NameOfNote",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setNameOfNote"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 1,
+                        "name": "Description",
+                        "notify": "DescriptionChanged",
+                        "read": "Description",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setDescription"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 2,
+                        "name": "Text",
+                        "notify": "TextChanged",
+                        "read": "Text",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setText"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 3,
+                        "name": "LastDateOfRedact",
+                        "notify": "LastDateOfRedactChanged",
+                        "read": "LastDateOfRedact",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false,
+                        "write": "setLastDateOfRedact"
+                    }
+                ],
+                "qualifiedClassName": "NotesManager",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "NameOfNoteChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "DescriptionChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "TextChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "LastDateOfRedactChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "NotesManager.h",
+        "outputRevision": 69
+    }
+]
