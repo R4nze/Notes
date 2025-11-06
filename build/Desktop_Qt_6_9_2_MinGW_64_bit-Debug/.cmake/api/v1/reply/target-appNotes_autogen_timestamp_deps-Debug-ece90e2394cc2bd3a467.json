@@ -23,7 +23,7 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 16,
+				"line" : 17,
 				"parent" : 0
 			},
 			{
@@ -71,12 +71,12 @@
 			"id" : "appNotes_copy_qml::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 0,
-			"id" : "appNotes_qmlimportscan::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 7,
 			"id" : "appNotes_copy_res::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "appNotes_qmlimportscan::@6890427a1f51a3e7e1df"
 		}
 	],
 	"folder" : 

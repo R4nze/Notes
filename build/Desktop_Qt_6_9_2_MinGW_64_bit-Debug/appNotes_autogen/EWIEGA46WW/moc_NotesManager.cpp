@@ -8,6 +8,7 @@
 
 #include "../../../../NotesManager.h"
 #include <QtCore/qmetatype.h>
+#include <QtCore/QList>
 
 #include <QtCore/qtmochelpers.h>
 
@@ -39,36 +40,27 @@ template <> constexpr inline auto NotesManager::qt_create_metaobjectdata<qt_meta
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "NotesManager",
-        "NameOfNoteChanged",
+        "noteListChanged",
         "",
-        "DescriptionChanged",
-        "TextChanged",
-        "LastDateOfRedactChanged",
-        "NameOfNote",
-        "Description",
-        "Text",
-        "LastDateOfRedact"
+        "addNote",
+        "name",
+        "description",
+        "text",
+        "noteList",
+        "QList<QObject*>"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Signal 'NameOfNoteChanged'
+        // Signal 'noteListChanged'
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
-        // Signal 'DescriptionChanged'
-        QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
-        // Signal 'TextChanged'
-        QtMocHelpers::SignalData<void()>(4, 2, QMC::AccessPublic, QMetaType::Void),
-        // Signal 'LastDateOfRedactChanged'
-        QtMocHelpers::SignalData<void()>(5, 2, QMC::AccessPublic, QMetaType::Void),
+        // Slot 'addNote'
+        QtMocHelpers::SlotData<void(const QString &, const QString &, const QString &)>(3, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 4 }, { QMetaType::QString, 5 }, { QMetaType::QString, 6 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
-        // property 'NameOfNote'
-        QtMocHelpers::PropertyData<QString>(6, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 0),
-        // property 'Description'
-        QtMocHelpers::PropertyData<QString>(7, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 1),
-        // property 'Text'
-        QtMocHelpers::PropertyData<QString>(8, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 2),
-        // property 'LastDateOfRedact'
-        QtMocHelpers::PropertyData<int>(9, QMetaType::Int, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 3),
+        // property 'noteList'
+        QtMocHelpers::PropertyData<QList<QObject*>>(7, 0x80000000 | 8, QMC::DefaultPropertyFlags | QMC::EnumOrFlag | QMC::Final, 0),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -90,40 +82,26 @@ void NotesManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
     auto *_t = static_cast<NotesManager *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->NameOfNoteChanged(); break;
-        case 1: _t->DescriptionChanged(); break;
-        case 2: _t->TextChanged(); break;
-        case 3: _t->LastDateOfRedactChanged(); break;
+        case 0: _t->noteListChanged(); break;
+        case 1: _t->addNote((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (NotesManager::*)()>(_a, &NotesManager::NameOfNoteChanged, 0))
+        if (QtMocHelpers::indexOfMethod<void (NotesManager::*)()>(_a, &NotesManager::noteListChanged, 0))
             return;
-        if (QtMocHelpers::indexOfMethod<void (NotesManager::*)()>(_a, &NotesManager::DescriptionChanged, 1))
-            return;
-        if (QtMocHelpers::indexOfMethod<void (NotesManager::*)()>(_a, &NotesManager::TextChanged, 2))
-            return;
-        if (QtMocHelpers::indexOfMethod<void (NotesManager::*)()>(_a, &NotesManager::LastDateOfRedactChanged, 3))
-            return;
+    }
+    if (_c == QMetaObject::RegisterPropertyMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+        case 0:
+            *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QList<QObject*> >(); break;
+        }
     }
     if (_c == QMetaObject::ReadProperty) {
         void *_v = _a[0];
         switch (_id) {
-        case 0: *reinterpret_cast<QString*>(_v) = _t->NameOfNote(); break;
-        case 1: *reinterpret_cast<QString*>(_v) = _t->Description(); break;
-        case 2: *reinterpret_cast<QString*>(_v) = _t->Text(); break;
-        case 3: *reinterpret_cast<int*>(_v) = _t->LastDateOfRedact(); break;
-        default: break;
-        }
-    }
-    if (_c == QMetaObject::WriteProperty) {
-        void *_v = _a[0];
-        switch (_id) {
-        case 0: _t->setNameOfNote(*reinterpret_cast<QString*>(_v)); break;
-        case 1: _t->setDescription(*reinterpret_cast<QString*>(_v)); break;
-        case 2: _t->setText(*reinterpret_cast<QString*>(_v)); break;
-        case 3: _t->setLastDateOfRedact(*reinterpret_cast<int*>(_v)); break;
+        case 0: *reinterpret_cast<QList<QObject*>*>(_v) = _t->noteList(); break;
         default: break;
         }
     }
@@ -148,45 +126,27 @@ int NotesManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 2;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 2;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 1;
     }
     return _id;
 }
 
 // SIGNAL 0
-void NotesManager::NameOfNoteChanged()
+void NotesManager::noteListChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
-}
-
-// SIGNAL 1
-void NotesManager::DescriptionChanged()
-{
-    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
-}
-
-// SIGNAL 2
-void NotesManager::TextChanged()
-{
-    QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
-}
-
-// SIGNAL 3
-void NotesManager::LastDateOfRedactChanged()
-{
-    QMetaObject::activate(this, &staticMetaObject, 3, nullptr);
 }
 QT_WARNING_POP

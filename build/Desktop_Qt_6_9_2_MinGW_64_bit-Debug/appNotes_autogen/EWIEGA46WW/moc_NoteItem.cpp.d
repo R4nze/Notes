@@ -1,7 +1,5 @@
-C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appNotes_autogen/EWIEGA46WW/moc_NotesManager.cpp: C:/Users/Me/Documents/GitHub/Notes/NotesManager.h \
+C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appNotes_autogen/EWIEGA46WW/moc_NoteItem.cpp: C:/Users/Me/Documents/GitHub/Notes/NoteItem.h \
   C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appNotes_autogen/moc_predefs.h \
-  C:/Users/Me/Documents/GitHub/Notes/NoteItem.h \
-  D:/Qt/6.9.2/mingw_64/include/QtCore/QList \
   D:/Qt/6.9.2/mingw_64/include/QtCore/QObject \
   D:/Qt/6.9.2/mingw_64/include/QtCore/q17memory.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/q20functional.h \

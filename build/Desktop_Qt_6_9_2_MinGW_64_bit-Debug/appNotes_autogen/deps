@@ -1,5 +1,7 @@
 appNotes_autogen/timestamp: \
 	C:/Users/Me/Documents/GitHub/Notes/CMakeLists.txt \
+	C:/Users/Me/Documents/GitHub/Notes/NoteItem.cpp \
+	C:/Users/Me/Documents/GitHub/Notes/NoteItem.h \
 	C:/Users/Me/Documents/GitHub/Notes/NotesManager.cpp \
 	C:/Users/Me/Documents/GitHub/Notes/NotesManager.h \
 	C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/qml_imports/appNotes_conf.cmake \
@@ -10,6 +12,7 @@ appNotes_autogen/timestamp: \
 	C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appNotes_autogen/moc_predefs.h \
 	C:/Users/Me/Documents/GitHub/Notes/main.cpp \
+	D:/Qt/6.9.2/mingw_64/include/QtCore/QList \
 	D:/Qt/6.9.2/mingw_64/include/QtCore/QObject \
 	D:/Qt/6.9.2/mingw_64/include/QtCore/q17memory.h \
 	D:/Qt/6.9.2/mingw_64/include/QtCore/q20functional.h \

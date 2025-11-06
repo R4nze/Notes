@@ -1,12 +1,91 @@
 import QtQuick
-import QtQuick.Controls
+import com.yourapp.notes 1.0
+
 Window {
     width: 360
     height: 640
     visible: true
     title: qsTr("Notes")
 
-    Rectangle{
+    Flickable{ //Прокручивающаяся сетка заметок
+        id: notesFlickable
+        anchors.fill: parent
+        contentHeight: parent.height
+        contentWidth: parent.width
+
+        Grid{
+            id: notesGrid
+            width: parent.width
+            columns: 2
+            spacing: 40
+
+            anchors{
+                top: parent.top
+                left: parent.left
+                right: parent.right
+                topMargin: 50
+
+                leftMargin: 20
+            }
+
+            Repeater{
+                model: notesManager.noteList
+
+                Rectangle{
+                    //width: notesGrid.width / 2 - notesGrid.spacing * 1.5
+                    height: 190
+                    width: 120
+                    color: "lightblue"
+                    border.color: "gray"
+                    radius: 8
+
+                    Text{
+                        id: textOfText
+                        text: modelData.Text
+                        font.pointSize: 8
+                        anchors{
+                            top: parent.top
+                            left: parent.left
+                            right: parent.right
+                            bottom: textOfName.top
+                            topMargin: 5
+                            leftMargin: 8
+                            rightMargin: 8
+                        }
+                        wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                        clip: true
+                    }
+
+                    Text{
+                        id: textOfName
+                        anchors{
+                            top: parent.top
+                            left: parent.left
+                            right: parent.right
+                            bottom: parent.bottom
+                            bottomMargin: 5
+                            leftMargin: 5
+                            rightMargin: 5
+                        }
+                        horizontalAlignment: Text.AlignHCenter
+                        text: modelData.NameOfNote
+                        font.pointSize: 8
+                        wrapMode: Text.WordWrap // Разрешаем перенос слов
+                        maximumLineCount: 2
+                        elide: Text.ElideRight
+
+                        //height: 30
+                        verticalAlignment: Text.AlignBottom
+
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    Rectangle{ //Кнопка добавления заметки
         id: addNotesButton
 
         width: 50
@@ -20,89 +99,15 @@ Window {
             bottomMargin: 90
         }
         MouseArea{
-
             anchors.fill: parent
             onClicked: {
-                addDialog.visible = true
-
+                editorScreen.dialogController.open();
             }
         }
+
     }
-
-    Dialog{
-        id: addDialog
-        focus:true
-        anchors.centerIn: parent
-
-        Rectangle{
-            id: inRectangle
-
-            anchors{
-                left: parent.left
-                right: parent.right
-                bottom: parent.bottom
-                top: parent.top
-            }
-            Column{
-                id: addColumn
-
-                spacing: 20
-                anchors{
-                    fill: inRectangle
-                    leftMargin: 15
-                    topMargin: 15
-                    rightMargin: 15
-                }
-
-                Rectangle {
-                    id: nameRectangle
-
-                    color: "red"
-                     height: 25
-                     width: parent.width
-
-                     TextInput{
-                         text: "Введите название"
-                     }
-                }
-                Rectangle {
-                    id: descriptionRectangle
-
-                    color: "yellow"
-                     height: 25
-                     width: parent.width
-                }
-                Rectangle {
-                    id: textRectangle
-
-                    color: "pink"
-                     height: 25
-                     width: parent.width
-                }
-                Rectangle {
-                    id: dateRectangle
-
-                    color: "purple"
-
-                     height: 25
-                     width: parent.width
-                }
-            }
-
-
-
-            // TextInput{
-            //     text: "Введите название"
-            // }
-
-            color: "blue"
-        }
-        width: 300
-        height: 350
-        standardButtons: Dialog.Ok | Dialog.Cancel
-        onAccepted: console.log("Ok clicked")
-        onRejected: console.log("Cancel clicked")
+    EditorScreen{ //Окно добавления заметки
+        id: editorScreen
     }
-
 
 }

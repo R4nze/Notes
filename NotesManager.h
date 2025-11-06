@@ -2,40 +2,27 @@
 #define NOTESMANAGER_H
 
 #include <QObject>
+#include<QList>
+#include"NoteItem.h"
 
 class NotesManager : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString NameOfNote READ NameOfNote WRITE setNameOfNote NOTIFY NameOfNoteChanged FINAL)
-    Q_PROPERTY(QString Description READ Description WRITE setDescription NOTIFY DescriptionChanged FINAL)
-    Q_PROPERTY(QString Text READ Text WRITE setText NOTIFY TextChanged FINAL)
-    Q_PROPERTY(int LastDateOfRedact READ LastDateOfRedact WRITE setLastDateOfRedact NOTIFY LastDateOfRedactChanged FINAL)
+    Q_PROPERTY(QList<QObject*> noteList READ noteList  NOTIFY noteListChanged FINAL)
+
 public:
-    explicit NotesManager(QString nameOfNote, QString text, int date = 5,QString description = "",QObject *parent = nullptr);
+    explicit NotesManager(QObject *parent = nullptr);
 
-    QString NameOfNote() const;
-    void setNameOfNote(const QString &newNameOfNote);
+    QList<QObject *> noteList() const {return m_noteList;}
 
-    QString Description() const;
-    void setDescription(const QString &newDescription);
-
-    QString Text() const;
-    void setText(const QString &newText);
-
-    int LastDateOfRedact() const;
-    void setLastDateOfRedact(int newLastDateOfRedact);
+public slots:
+    void addNote(const QString &name, const QString &description, const QString &text);
 
 private:
-    QString m_NameOfNote;
-    QString m_Description;
-    QString m_Text;
-    int m_LastDateOfRedact;
+    QList<QObject *> m_noteList;
 
 signals:
-    void NameOfNoteChanged();
-    void DescriptionChanged();
-    void TextChanged();
-    void LastDateOfRedactChanged();
+    void noteListChanged();
 };
 
 #endif // NOTESMANAGER_H

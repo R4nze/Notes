@@ -2,7 +2,7 @@
     {
         "classes": [
             {
-                "className": "NotesManager",
+                "className": "NoteItem",
                 "lineNumber": 6,
                 "object": true,
                 "properties": [
@@ -67,7 +67,7 @@
                         "write": "setLastDateOfRedact"
                     }
                 ],
-                "qualifiedClassName": "NotesManager",
+                "qualifiedClassName": "NoteItem",
                 "signals": [
                     {
                         "access": "public",
@@ -91,6 +91,70 @@
                         "access": "public",
                         "index": 3,
                         "name": "LastDateOfRedactChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "NoteItem.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "className": "NotesManager",
+                "lineNumber": 8,
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 0,
+                        "name": "noteList",
+                        "notify": "noteListChanged",
+                        "read": "noteList",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QList<QObject*>",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "NotesManager",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "noteListChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "description",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "text",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "addNote",
                         "returnType": "void"
                     }
                 ],
