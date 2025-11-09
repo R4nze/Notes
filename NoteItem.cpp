@@ -5,8 +5,6 @@ NoteItem::NoteItem(QString nameOfNote,QString description,QString text, int date
 {}
 
 
-
-
 QString NoteItem::NameOfNote() const
 {
     return m_NameOfNote;
@@ -14,7 +12,7 @@ QString NoteItem::NameOfNote() const
 
 void NoteItem::setNameOfNote(const QString &newNameOfNote)
 {
-    if (m_NameOfNote == newNameOfNote)
+    if (m_NameOfNote == newNameOfNote || (m_NameOfNote == "" && m_NameOfNote == newNameOfNote))
         return;
     m_NameOfNote = newNameOfNote;
     emit NameOfNoteChanged();
@@ -27,7 +25,7 @@ QString NoteItem::Description() const
 
 void NoteItem::setDescription(const QString &newDescription)
 {
-    if (m_Description == newDescription)
+    if (m_Description == newDescription || (m_Description == "" && m_Description == newDescription))
         return;
     m_Description = newDescription;
     emit DescriptionChanged();
@@ -40,7 +38,7 @@ QString NoteItem::Text() const
 
 void NoteItem::setText(const QString &newText)
 {
-    if (m_Text == newText)
+    if (m_Text == newText || (m_Text == "" && m_Text == newText))
         return;
     m_Text = newText;
     emit TextChanged();
@@ -53,7 +51,7 @@ int NoteItem::LastDateOfRedact() const
 
 void NoteItem::setLastDateOfRedact(int newLastDateOfRedact)
 {
-    if (m_LastDateOfRedact == newLastDateOfRedact)
+    if (m_LastDateOfRedact == newLastDateOfRedact || (m_LastDateOfRedact == 0 && m_LastDateOfRedact == newLastDateOfRedact))
         return;
     m_LastDateOfRedact = newLastDateOfRedact;
     emit LastDateOfRedactChanged();

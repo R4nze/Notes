@@ -17,6 +17,7 @@ public:
 
 public slots:
     void addNote(const QString &name, const QString &description, const QString &text);
+    void changeNote(NoteItem* item, const QString &name, const QString &description, const QString &text);
 
 private:
     QList<QObject *> m_noteList;

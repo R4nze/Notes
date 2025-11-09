@@ -49,6 +49,30 @@
                     "index": 1,
                     "name": "addNote",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "item",
+                            "type": "NoteItem*"
+                        },
+                        {
+                            "name": "name",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "description",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "text",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "changeNote",
+                    "returnType": "void"
                 }
             ],
             "superClasses": [

@@ -4,6 +4,14 @@ Item {
     id: root
 
     property alias dialogController: addDialog
+    property var currentNote: null
+
+    function changeNote(note){
+                     editorScreen.currentNote = note;
+                         nameField.text = note.NameOfNote;
+                         descriptionField.text = note.Description;
+                         textField.text = note.Text;
+}
 
     Dialog{
         id: addDialog
@@ -12,12 +20,28 @@ Item {
         width: 360
         height: 640
         standardButtons: Dialog.Apply | Dialog.Cancel
+        onClosed: {
+                // Очищаем каждое поле ввода
+                nameField.text = "";
+                descriptionField.text = "";
+                textField.text = "";
+        }
         onApplied:{
-                  notesManager.addNote(nameField.text, descriptionField.text, textField.text)
+                     if(editorScreen.currentNote){
+                                          notesManager.changeNote(editorScreen.currentNote,nameField.text,
+                                                            descriptionField.text,
+                                                                  textField.text);
+
+                     }
+                     else{
+                                    notesManager.addNote(nameField.text, descriptionField.text, textField.text)
+                     }
                      addDialog.close()
         }
-        onRejected: console.log("Cancel clicked")
-
+        onRejected:{
+                     console.log("Cancel clicked")
+                     addDialog.close()
+        }
         Rectangle{
             id: inRectangle
 
@@ -49,6 +73,7 @@ Item {
                      height: 30
                      placeholderText: "Введите имя"
                      placeholderTextColor: "#55000000"
+
                 }
                 TextField{
                      id: descriptionField

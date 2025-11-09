@@ -32,7 +32,6 @@ Window {
                 model: notesManager.noteList
 
                 Rectangle{
-                    //width: notesGrid.width / 2 - notesGrid.spacing * 1.5
                     height: 190
                     width: 120
                     color: "lightblue"
@@ -53,19 +52,20 @@ Window {
                             rightMargin: 8
                         }
                         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-                        clip: true
+                        elide: Text.ElideRight
+
                     }
 
                     Text{
                         id: textOfName
                         anchors{
-                            top: parent.top
+
                             left: parent.left
                             right: parent.right
                             bottom: parent.bottom
-                            bottomMargin: 5
-                            leftMargin: 5
-                            rightMargin: 5
+                            bottomMargin: 15
+                            leftMargin: 7
+                            rightMargin: 7
                         }
                         horizontalAlignment: Text.AlignHCenter
                         text: modelData.NameOfNote
@@ -74,9 +74,17 @@ Window {
                         maximumLineCount: 2
                         elide: Text.ElideRight
 
-                        //height: 30
-                        verticalAlignment: Text.AlignBottom
+                        height: 15
+                    }
+                    MouseArea{
+                        id: noteInfo
 
+                        anchors.fill: parent
+                        onClicked: {
+                            editorScreen.changeNote(modelData);
+                            editorScreen.dialogController.open();
+
+                        }
                     }
                 }
             }
@@ -101,6 +109,7 @@ Window {
         MouseArea{
             anchors.fill: parent
             onClicked: {
+                editorScreen.currentNote = null;
                 editorScreen.dialogController.open();
             }
         }
