@@ -1,9 +1,8 @@
 #include "NoteItem.h"
-
-NoteItem::NoteItem(QString nameOfNote,QString description,QString text, int date, QObject *parent)
+#include <QDateTime>
+NoteItem::NoteItem(QString nameOfNote,QString description,QString text, QDateTime date, QObject *parent)
     : QObject{parent}, m_NameOfNote{nameOfNote}, m_Description{description}, m_Text{text}, m_LastDateOfRedact{date}
 {}
-
 
 QString NoteItem::NameOfNote() const
 {
@@ -44,14 +43,14 @@ void NoteItem::setText(const QString &newText)
     emit TextChanged();
 }
 
-int NoteItem::LastDateOfRedact() const
+QDateTime NoteItem::LastDateOfRedact() const
 {
     return m_LastDateOfRedact;
 }
 
-void NoteItem::setLastDateOfRedact(int newLastDateOfRedact)
+void NoteItem::setLastDateOfRedact(QDateTime &newLastDateOfRedact)
 {
-    if (m_LastDateOfRedact == newLastDateOfRedact || (m_LastDateOfRedact == 0 && m_LastDateOfRedact == newLastDateOfRedact))
+    if (m_LastDateOfRedact == newLastDateOfRedact)
         return;
     m_LastDateOfRedact = newLastDateOfRedact;
     emit LastDateOfRedactChanged();

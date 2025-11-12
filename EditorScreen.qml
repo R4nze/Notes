@@ -8,9 +8,9 @@ Item {
 
     function changeNote(note){
                      editorScreen.currentNote = note;
-                         nameField.text = note.NameOfNote;
-                         descriptionField.text = note.Description;
-                         textField.text = note.Text;
+                     nameField.text = note.NameOfNote;
+                     descriptionField.text = note.Description;
+                     textField.text = note.Text;
 }
 
     Dialog{
@@ -28,13 +28,16 @@ Item {
         }
         onApplied:{
                      if(editorScreen.currentNote){
-                                          notesManager.changeNote(editorScreen.currentNote,nameField.text,
-                                                            descriptionField.text,
-                                                                  textField.text);
+                     notesManager.changeNote(editorScreen.currentNote,
+                     nameField.text,
+                     descriptionField.text,
+                     textField.text);
 
                      }
                      else{
-                                    notesManager.addNote(nameField.text, descriptionField.text, textField.text)
+                     notesManager.addNote(nameField.text,
+                     descriptionField.text,
+                     textField.text)
                      }
                      addDialog.close()
         }

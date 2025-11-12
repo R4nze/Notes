@@ -2,6 +2,7 @@
 #define NOTEITEM_H
 
 #include <QObject>
+#include<QDateTime>
 
 class NoteItem : public QObject
 {
@@ -9,9 +10,9 @@ class NoteItem : public QObject
     Q_PROPERTY(QString NameOfNote READ NameOfNote WRITE setNameOfNote NOTIFY NameOfNoteChanged FINAL)
     Q_PROPERTY(QString Description READ Description WRITE setDescription NOTIFY DescriptionChanged FINAL)
     Q_PROPERTY(QString Text READ Text WRITE setText NOTIFY TextChanged FINAL)
-    Q_PROPERTY(int LastDateOfRedact READ LastDateOfRedact WRITE setLastDateOfRedact NOTIFY LastDateOfRedactChanged FINAL)
+    Q_PROPERTY(QDateTime LastDateOfRedact READ LastDateOfRedact WRITE setLastDateOfRedact NOTIFY LastDateOfRedactChanged FINAL)
 public:
-    explicit NoteItem(QString nameOfNote,QString description = "",QString text = "", int date = 0, QObject *parent = nullptr);
+    explicit NoteItem(QString nameOfNote,QString description = "",QString text = "", QDateTime date = QDateTime::currentDateTime(), QObject *parent = nullptr);
 
     QString NameOfNote() const;
     void setNameOfNote(const QString &newNameOfNote);
@@ -22,14 +23,14 @@ public:
     QString Text() const;
     void setText(const QString &newText);
 
-    int LastDateOfRedact() const;
-    void setLastDateOfRedact(int newLastDateOfRedact);
+    QDateTime LastDateOfRedact() const;
+    void setLastDateOfRedact(QDateTime &newLastDateOfRedact);
 
 private:
     QString m_NameOfNote;
     QString m_Description;
     QString m_Text;
-    int m_LastDateOfRedact;
+    QDateTime m_LastDateOfRedact;
 
 signals:
     void NameOfNoteChanged();
