@@ -7,7 +7,6 @@
 int main(int argc, char *argv[])
 {
    QGuiApplication app(argc, argv);
-
     QQmlApplicationEngine engine;
 
     qmlRegisterType<NoteItem>("com.yourapp.notes", 1, 0, "NoteItem");

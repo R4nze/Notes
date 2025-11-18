@@ -1,13 +1,10 @@
 #include "NoteItem.h"
 #include <QDateTime>
-NoteItem::NoteItem(QString nameOfNote,QString description,QString text, QDateTime date, QObject *parent)
-    : QObject{parent}, m_NameOfNote{nameOfNote}, m_Description{description}, m_Text{text}, m_LastDateOfRedact{date}
-{}
 
-QString NoteItem::NameOfNote() const
-{
-    return m_NameOfNote;
-}
+NoteItem::NoteItem(QString nameOfNote,QString description,QString text, int id, QDateTime date, QObject *parent)
+    : QObject{parent}, m_NameOfNote{nameOfNote}, m_Description{description}, m_Text{text}, m_LastDateOfRedact{date},
+    m_idOfType{id}
+{}
 
 void NoteItem::setNameOfNote(const QString &newNameOfNote)
 {
@@ -15,11 +12,6 @@ void NoteItem::setNameOfNote(const QString &newNameOfNote)
         return;
     m_NameOfNote = newNameOfNote;
     emit NameOfNoteChanged();
-}
-
-QString NoteItem::Description() const
-{
-    return m_Description;
 }
 
 void NoteItem::setDescription(const QString &newDescription)
@@ -30,11 +22,6 @@ void NoteItem::setDescription(const QString &newDescription)
     emit DescriptionChanged();
 }
 
-QString NoteItem::Text() const
-{
-    return m_Text;
-}
-
 void NoteItem::setText(const QString &newText)
 {
     if (m_Text == newText || (m_Text == "" && m_Text == newText))
@@ -43,15 +30,25 @@ void NoteItem::setText(const QString &newText)
     emit TextChanged();
 }
 
-QDateTime NoteItem::LastDateOfRedact() const
-{
-    return m_LastDateOfRedact;
-}
-
 void NoteItem::setLastDateOfRedact(QDateTime &newLastDateOfRedact)
 {
     if (m_LastDateOfRedact == newLastDateOfRedact)
         return;
     m_LastDateOfRedact = newLastDateOfRedact;
     emit LastDateOfRedactChanged();
+}
+void NoteItem::setIdOfType(int newIdOfType)
+{
+    if (m_idOfType == newIdOfType)
+        return;
+    m_idOfType = newIdOfType;
+    emit idOfTypeChanged();
+}
+
+void NoteItem::setColor(const QColor &newColor)
+{
+    if (m_color == newColor)
+        return;
+    m_color = newColor;
+    emit colorChanged();
 }

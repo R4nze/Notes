@@ -8,6 +8,7 @@ Window {
     property bool isDeleteMode: false
     property bool isAddMode: false
 
+
     Flickable{ //Прокручивающаяся сетка заметок
         id: notesFlickable
         anchors{
@@ -69,7 +70,9 @@ Window {
                         Rectangle{
                         id: frontRectangle
                         anchors.fill: parent
-                        color: "lightblue"
+                        // color: "lightblue"
+                        color: notesManager.getTypeColor(modelData);
+                        // color: modelData.noteColor
                         border.color: isSelectedItem && isDeleteMode ? "black" : "gray"
                         radius: 8
                         border.width: isSelectedItem && isDeleteMode ? 3 : 1
@@ -197,7 +200,7 @@ Window {
                         Timer{
                             id: longPressTimer
 
-                            interval: 650
+                            interval: 1000
                             repeat: false
 
                             onTriggered: {

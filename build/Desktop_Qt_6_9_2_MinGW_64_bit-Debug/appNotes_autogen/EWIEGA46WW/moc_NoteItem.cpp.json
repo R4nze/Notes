@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "NoteItem",
-            "lineNumber": 6,
+            "lineNumber": 8,
             "object": true,
             "properties": [
                 {
@@ -61,9 +61,39 @@
                     "required": false,
                     "scriptable": true,
                     "stored": true,
-                    "type": "int",
+                    "type": "QDateTime",
                     "user": false,
                     "write": "setLastDateOfRedact"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 4,
+                    "name": "idOfType",
+                    "notify": "idOfTypeChanged",
+                    "read": "idOfType",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false,
+                    "write": "setIdOfType"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 5,
+                    "name": "color",
+                    "notify": "colorChanged",
+                    "read": "color",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QColor",
+                    "user": false,
+                    "write": "setColor"
                 }
             ],
             "qualifiedClassName": "NoteItem",
@@ -90,6 +120,18 @@
                     "access": "public",
                     "index": 3,
                     "name": "LastDateOfRedactChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 4,
+                    "name": "idOfTypeChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 5,
+                    "name": "colorChanged",
                     "returnType": "void"
                 }
             ],

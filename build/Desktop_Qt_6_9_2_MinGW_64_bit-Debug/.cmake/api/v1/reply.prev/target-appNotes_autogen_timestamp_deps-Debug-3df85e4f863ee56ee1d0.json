@@ -23,7 +23,7 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 16,
+				"line" : 17,
 				"parent" : 0
 			},
 			{
@@ -41,7 +41,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 3607,
+				"line" : 3613,
 				"parent" : 3
 			},
 			{
@@ -53,7 +53,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 3613,
+				"line" : 3607,
 				"parent" : 3
 			},
 			{
@@ -67,16 +67,16 @@
 	"dependencies" : 
 	[
 		{
+			"backtrace" : 5,
+			"id" : "appNotes_copy_res::@6890427a1f51a3e7e1df"
+		},
+		{
 			"backtrace" : 0,
 			"id" : "appNotes_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 5,
-			"id" : "appNotes_copy_qml::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 7,
-			"id" : "appNotes_copy_res::@6890427a1f51a3e7e1df"
+			"id" : "appNotes_copy_qml::@6890427a1f51a3e7e1df"
 		}
 	],
 	"folder" : 

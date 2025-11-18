@@ -1,12 +1,11 @@
 {
-	"backtrace" : 5,
+	"backtrace" : 4,
 	"backtraceGraph" : 
 	{
 		"commands" : 
 		[
 			"add_custom_target",
-			"_qt_internal_qml_copy_files_to_build_dir",
-			"qt6_target_qml_sources",
+			"_qt_internal_qml_type_registration",
 			"qt6_add_qml_module",
 			"qt_add_qml_module"
 		],
@@ -21,34 +20,28 @@
 				"file" : 1
 			},
 			{
-				"command" : 4,
+				"command" : 3,
 				"file" : 1,
-				"line" : 16,
+				"line" : 18,
 				"parent" : 0
 			},
 			{
-				"command" : 3,
+				"command" : 2,
 				"file" : 0,
 				"line" : 1296,
 				"parent" : 1
 			},
 			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 951,
-				"parent" : 2
-			},
-			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 3613,
-				"parent" : 3
+				"line" : 833,
+				"parent" : 2
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 2957,
-				"parent" : 4
+				"line" : 3950,
+				"parent" : 3
 			}
 		]
 	},
@@ -56,8 +49,8 @@
 	{
 		"name" : "QtInternalTargets"
 	},
-	"id" : "appNotes_copy_res::@6890427a1f51a3e7e1df",
-	"name" : "appNotes_copy_res",
+	"id" : "appNotes_qmltyperegistration::@6890427a1f51a3e7e1df",
+	"name" : "appNotes_qmltyperegistration",
 	"paths" : 
 	{
 		"build" : ".",
@@ -84,21 +77,21 @@
 	"sources" : 
 	[
 		{
-			"backtrace" : 5,
+			"backtrace" : 4,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appNotes_copy_res",
+			"path" : "build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appNotes_qmltyperegistration",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appNotes_copy_res.rule",
+			"path" : "build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/CMakeFiles/appNotes_qmltyperegistration.rule",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/.qt/appNotes_res.txt.rule",
+			"path" : "build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appnotes_qmltyperegistrations.cpp.rule",
 			"sourceGroupIndex" : 1
 		}
 	],
