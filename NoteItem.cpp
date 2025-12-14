@@ -1,9 +1,9 @@
 #include "NoteItem.h"
 #include <QDateTime>
 
-NoteItem::NoteItem(QString nameOfNote,QString description,QString text, int id, QDateTime date, QObject *parent)
-    : QObject{parent}, m_NameOfNote{nameOfNote}, m_Description{description}, m_Text{text}, m_LastDateOfRedact{date},
-    m_idOfType{id}
+NoteItem::NoteItem(int id, QString nameOfNote,QString description,QString text, int idOfType, QDateTime date, bool isFavorite, QObject *parent)
+    : QObject{parent}, m_id{id}, m_NameOfNote{nameOfNote}, m_Description{description}, m_Text{text}, m_LastDateOfRedact{date},
+      m_isFavorite{isFavorite}, m_idOfType{idOfType}
 {}
 
 void NoteItem::setNameOfNote(const QString &newNameOfNote)
@@ -51,4 +51,12 @@ void NoteItem::setColor(const QColor &newColor)
         return;
     m_color = newColor;
     emit colorChanged();
+}
+
+void NoteItem::setIsFavorite(bool newIsFavorite)
+{
+   if (m_isFavorite == newIsFavorite)
+      return;
+   m_isFavorite = newIsFavorite;
+   emit isFavoriteChanged();
 }

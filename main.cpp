@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     qmlRegisterType<NoteItem>("com.yourapp.notes", 1, 0, "NoteItem");
+    qmlRegisterType<Type>("com.yourapp.models", 1, 0, "Type");
 
     NotesManager* notesManager = new NotesManager();
     engine.rootContext()->setContextProperty("notesManager", notesManager);

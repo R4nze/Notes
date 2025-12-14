@@ -8,6 +8,8 @@ find_package(Qt6 REQUIRED COMPONENTS Quick)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
 find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Quick Sql)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
@@ -26,6 +28,10 @@ qt_add_qml_module(appNotes
         SOURCES NoteItem.h NoteItem.cpp
         SOURCES
         SOURCES Type.h Type.cpp
+        QML_FILES EditorType.qml
+        QML_FILES SortNotes.qml
+        QML_FILES SearchEditor.qml
+        SOURCES DatabaseHandler.h DatabaseHandler.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -39,11 +45,11 @@ set_target_properties(appNotes PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-target_link_libraries(appNotes
-    PRIVATE Qt6::Quick
-)
+target_link_libraries(appNotes PRIVATE Qt6::Quick)
 target_link_libraries(appNotes PRIVATE Qt6::Core)
 target_link_libraries(appNotes PRIVATE Qt6::Core)
+target_link_libraries(appNotes PRIVATE Qt6::Core)
+target_link_libraries(appNotes PRIVATE Qt6::Quick Qt6::Sql)
 target_link_libraries(appNotes PRIVATE Qt6::Core)
 
 include(GNUInstallDirs)

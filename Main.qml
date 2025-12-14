@@ -1,4 +1,5 @@
 import QtQuick
+import QtQuick.Layouts
 import com.yourapp.notes 1.0
 Window {
     width: 360
@@ -12,14 +13,12 @@ Window {
     Flickable{ //Прокручивающаяся сетка заметок
         id: notesFlickable
         anchors{
-            fill: parent
+            left:parent.left
+            right:parent.right
             bottom: bottomBar.top
             top: topBar.bottom
-            topMargin: 35
-            bottomMargin: 30
         }
-
-        contentHeight: notesGrid.implicitHeight + 100
+        contentHeight: notesGrid.implicitHeight + 65
         contentWidth: parent.width
         Grid{
             id: notesGrid
@@ -33,9 +32,9 @@ Window {
                 top: parent.top
                 left: parent.left
                 right: parent.right
-                topMargin: 50
+                topMargin: 25
                 rightMargin: 20
-                leftMargin: 20
+                leftMargin: 28
             }
 
             Repeater{
@@ -47,32 +46,51 @@ Window {
                     width: notesGrid.columns === 1 ? notesGrid.width : 120
                     property bool flipped: false
                     property bool isSelectedItem: false
-                    Text{
-                        id: frontTime
-                        visible: !notesGrid.timeFlipped
-                        anchors{
+                    Item {
+                        id: bottomInfoContainer
+                        anchors {
                             top: noteCard.bottom
                             left: noteCard.left
                             right: noteCard.right
                         }
-                        transform : Rotation{
-                            origin.x: frontTime.width / 2
-                            origin.y: frontTime.height / 2
-                            angle: -rotation.angle
+                        height: 20
+                        visible: !notesGrid.timeFlipped
 
+                        transform: Rotation {
+                            origin.x: bottomInfoContainer.width / 2
+                            origin.y: bottomInfoContainer.height / 2
+                            angle: -rotation.angle
                             axis.x: 0; axis.y: 1; axis.z: 0;
                         }
 
-                        horizontalAlignment: Text.AlignHCenter
-                        text: Qt.formatTime(modelData.LastDateOfRedact, "hh:mm")
+                        Text {
+                            id: frontTime
+                            text: Qt.formatTime(modelData.LastDateOfRedact, "hh:mm")
+                            font.pixelSize: 12
+                            color: "black"
+                            anchors.centerIn: parent
+                        }
+
+                        Text {
+                            id: favouriteStar
+                            text: "★"
+                            color: "#FFD700"
+                            font.pixelSize: 14
+
+                            visible: modelData.isFavorite
+
+                            anchors {
+                                right: frontTime.left
+                                verticalCenter: frontTime.verticalCenter
+                                rightMargin: 4
+                            }
+                        }
                     }
                     front:
                         Rectangle{
                         id: frontRectangle
                         anchors.fill: parent
-                        // color: "lightblue"
-                        color: notesManager.getTypeColor(modelData);
-                        // color: modelData.noteColor
+                        color: modelData.color
                         border.color: isSelectedItem && isDeleteMode ? "black" : "gray"
                         radius: 8
                         border.width: isSelectedItem && isDeleteMode ? 3 : 1
@@ -129,8 +147,9 @@ Window {
                         Rectangle{
                         id: backRectangle
                         anchors.fill: parent
-                        color: "red"
-                        border.color: "gray"
+                        color: notesManager.getDarkerColor(modelData.color, 140);
+                        border.color: isSelectedItem && isDeleteMode ? "black" : "gray"
+                        border.width: isSelectedItem && isDeleteMode ? 3 : 1
                         radius: 8
 
                         Text{
@@ -220,6 +239,7 @@ Window {
                         onPositionChanged: function(mouse){
                             if(Math.abs(mouse.x - pressPos.x) > 10 || Math.abs(mouse.y - pressPos.y) > 10){
                                 isSwipe = true;
+                                longPressTimer.stop();
                             }
                         }
 
@@ -246,66 +266,88 @@ Window {
 
     Rectangle{
         id: topBar
-        height: 70
-        width: parent.width
-        anchors.top: parent.top
-        color: "blue"
-
-        Rectangle{
-            id: cancelDeleteModeButton
-            visible: isDeleteMode
-            color: "yellow"
-            height: 25
-            width: 25
-            anchors{
-                left: parent.left
-                bottom: parent.bottom
-                leftMargin: 10
-                bottomMargin: 10
-            }
-            MouseArea{
-                id: cancelButton
-                anchors.fill: parent
-                onClicked: {
-                    isDeleteMode = !isDeleteMode
-                    console.log("Режим удаления выключен")
-                }
-            }
-
+        height: 95
+        anchors{
+            top: parent.top
+            left: parent.left
+            right: parent.right
         }
-
+        color: "blue"
+    }
+    Rectangle{ //кнопка отмены DeleteMode
+        id: cancelDeleteModeButton
+        visible: isDeleteMode
+        color: "yellow"
+        height: 25
+        width: 25
+        anchors{
+            left: topBar.left
+            top: topBar.top
+            leftMargin: 22
+            topMargin: 10
+        }
+        MouseArea{
+            id: cancelButton
+            anchors.fill: parent
+            onClicked: {
+                isDeleteMode = !isDeleteMode
+                notesManager.removeAllSelectedNote();
+                console.log("Режим удаления выключен")
+            }
+        }
     }
 
     Rectangle{
         id: bottomBar
         height: 60
         width: parent.width
-        anchors.bottom: parent.bottom
+        anchors{
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+        }
         color: "lightgreen"
-
-        Rectangle{
-            id: deleteButtom
-            visible: isDeleteMode
-            color: "grey"
-            height: 25
-            width: 25
-            anchors{
-                left: bottomBar.left
-                top: bottomBar.top
-                leftMargin: 10
-                topMargin: 10
-            }
-            MouseArea{
-                anchors.fill: parent
-                onClicked:{
-                    notesManager.deleteSelectedNotes()
-                    isDeleteMode = !isDeleteMode
-                }
-
+    }
+    Rectangle{
+        id: favouritesButtons
+        visible: isDeleteMode
+        color: "red"
+        height: 25
+        width: 25
+        anchors{
+            right: bottomBar.right
+            top: bottomBar.top
+            rightMargin: 10
+            topMargin: 10
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: {
+                notesManager.toggleSelectedFavorites();
+                isDeleteMode = !isDeleteMode
             }
         }
     }
-
+    Rectangle{ //кнопка удаления заметки
+        id: deleteButtom
+        visible: isDeleteMode
+        color: "grey"
+        height: 25
+        width: 25
+        anchors{
+            left: bottomBar.left
+            top: bottomBar.top
+            leftMargin: 10
+            topMargin: 10
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked:{
+                notesManager.deleteSelectedNotes()
+                isDeleteMode = !isDeleteMode
+            }
+        }
+    }
     Rectangle{ //Кнопка добавления заметки
         id: addNotesButton
         width: 55
@@ -325,9 +367,7 @@ Window {
                 if(isDeleteMode){
                     isDeleteMode = !isDeleteMode
                 }
-
                 editorScreen.dialogController.open();
-
             }
         }
     }
@@ -335,14 +375,14 @@ Window {
     Rectangle{
         id: addSwapButton //Кнопка изменения вида кнопок
         property bool colorChange: true
-        width: 25
-        height: 25
+        width: 22
+        height: 22
         color: colorChange ? "grey" : "lightblue"
         anchors{
             right: topBar.right
-            bottom: topBar.bottom
-            rightMargin: 20
-            bottomMargin: 20
+            top: topBar.top
+            rightMargin: 10
+            topMargin: 15
         }
         MouseArea{
             anchors.fill: parent
@@ -353,9 +393,122 @@ Window {
             }
         }
     }
+    Rectangle{
+        id: sortNotesBy
+        width: 22
+        height: 22
+        anchors{
+            right: addSwapButton.left
+            top: topBar.top
+            rightMargin: 15
+            topMargin: 15
+        }
+        color: "purple"
+        MouseArea{
+            anchors.fill: parent
+            onClicked: {
+                sortNotes.sortNotesDialog.open();
+            }
+        }
+    }
+    Rectangle{
+        id: seacrhButton
+        width: 22
+        height: 22
+        anchors{
+            right: sortNotesBy.left
+            top: topBar.top
+            rightMargin: 15
+            topMargin: 15
+        }
+        color: "pink"
+        MouseArea{
+            anchors.fill: parent
+            onClicked:{
+                searchEditor.searchDialog.open();
+            }
+        }
+    }
 
+    Rectangle{
+        id: changeTypeButton //Кнопка изменения типов
+        anchors{
+            right: topBar.right
+            bottom: topBar.bottom
+            rightMargin: 10
+            bottomMargin: 18
+        }
+        width: 87
+        height: 30
+        color: "orange"
+
+        MouseArea{
+            anchors.fill: parent
+            onClicked:{
+                editorType.dialogController.open();
+            }
+        }
+    }
+
+    Flickable{
+        anchors{
+            left: topBar.left
+            right: changeTypeButton.left
+            bottom: topBar.bottom
+            bottomMargin: 18
+            leftMargin: 8
+        }
+        contentWidth: topBar.width + changeTypeButton.width
+        flickableDirection: Flickable.HorizontalFlick
+        height: 30
+        clip: true
+        RowLayout{
+            id: rowOfTypes
+            anchors.verticalCenter: parent.verticalCenter
+            spacing: 10
+            Repeater{
+                model: notesManager.typeModel
+
+                Rectangle{
+                    id: rowRectangle
+                    color: modelData.nameOfColor
+
+                    Layout.preferredWidth: 75
+                    Layout.preferredHeight: 30
+                    radius: 8
+
+                    Text{
+                        anchors{
+                            left: parent.left
+                            right: parent.right
+                            top: parent.top
+                            bottom: parent.bottom
+                            leftMargin: 10
+                        }
+                        verticalAlignment: Text.AlignVCenter
+                        text: modelData.nameOfType
+                        elide: Text.ElideRight
+                    }
+                    MouseArea{
+                        anchors.fill:parent
+                        onClicked: {
+                            notesManager.sortByType(modelData.id);
+                        }
+                    }
+                }
+            }
+        }
+    }
     EditorScreen{ //Окно добавления заметки
         id: editorScreen
     }
-
+    EditorType{ //Окно изменения названия заметки
+        id: editorType
+    }
+    SortNotes{
+        id: sortNotes
+    }
+    SearchEditor{
+        id: searchEditor
+    }
 }
