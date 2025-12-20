@@ -32,6 +32,7 @@ qt_add_qml_module(appNotes
         QML_FILES SortNotes.qml
         QML_FILES SearchEditor.qml
         SOURCES DatabaseHandler.h DatabaseHandler.cpp
+        QML_FILES FancyButton.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

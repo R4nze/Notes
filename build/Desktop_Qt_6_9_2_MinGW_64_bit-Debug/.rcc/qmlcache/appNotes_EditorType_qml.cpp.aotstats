@@ -1,0 +1,204 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 12,
+                        "durationMicroseconds": 198,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 7
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 21,
+                        "durationMicroseconds": 110,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 8
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 53,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 14
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 33,
+                        "durationMicroseconds": 75,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 23
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 66,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 24
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 67,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 25
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 57,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 32
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 74,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 37
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 37,
+                        "durationMicroseconds": 69,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 38
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 1107,
+                        "errorMessage": "Cannot access value for name notesManager",
+                        "functionName": "onClicked",
+                        "line": 59
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 78,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 50
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 37,
+                        "durationMicroseconds": 62,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 51
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 40,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 55
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 54,
+                        "errorMessage": "",
+                        "functionName": "contentHeight",
+                        "line": 71
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 48,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 76
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 141,
+                        "errorMessage": "Cannot access value for name notesManager",
+                        "functionName": "model",
+                        "line": 81
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 47,
+                        "durationMicroseconds": 315,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "idField",
+                        "line": 86
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 111,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 88
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 284,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "text",
+                        "line": 91
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 44,
+                        "durationMicroseconds": 62,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 92
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 51,
+                        "durationMicroseconds": 77,
+                        "errorMessage": "",
+                        "functionName": "horizontalCenter",
+                        "line": 89
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 121,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "color",
+                        "line": 107
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 72,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 100
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 49,
+                        "durationMicroseconds": 65,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 102
+                    }
+                ],
+                "filePath": "C:/Users/Me/Documents/GitHub/Notes/EditorType.qml"
+            }
+        ],
+        "moduleId": "Notes(appNotes)"
+    }
+]

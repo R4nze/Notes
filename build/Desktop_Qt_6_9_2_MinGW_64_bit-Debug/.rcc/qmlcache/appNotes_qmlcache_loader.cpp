@@ -19,6 +19,34 @@ namespace _qt_qml_Notes_EditorScreen_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _qt_qml_Notes_EditorType_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_Notes_SortNotes_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_Notes_SearchEditor_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_Notes_FancyButton_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -35,6 +63,10 @@ Q_GLOBAL_STATIC(Registry, unitRegistry)
 Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Notes/Main.qml"), &QmlCacheGeneratedCode::_qt_qml_Notes_Main_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Notes/EditorScreen.qml"), &QmlCacheGeneratedCode::_qt_qml_Notes_EditorScreen_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Notes/EditorType.qml"), &QmlCacheGeneratedCode::_qt_qml_Notes_EditorType_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Notes/SortNotes.qml"), &QmlCacheGeneratedCode::_qt_qml_Notes_SortNotes_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Notes/SearchEditor.qml"), &QmlCacheGeneratedCode::_qt_qml_Notes_SearchEditor_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/Notes/FancyButton.qml"), &QmlCacheGeneratedCode::_qt_qml_Notes_FancyButton_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

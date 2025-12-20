@@ -155,7 +155,18 @@ Item {
                                 height: 10
                                 radius: 180
                                 // Получаем цвет из модели по текущему индексу ComboBox
-                                color: typesOfNote.model.get(typesOfNote.currentIndex).value
+                                //color: typesOfNote.model.get(typesOfNote.currentIndex).value
+
+                                gradient: Gradient{
+                                    GradientStop{
+                                        position:0.0
+                                        color: typesOfNote.model.get(typesOfNote.currentIndex).value
+                                    }
+                                    GradientStop{
+                                        position:1.0
+                                        color: Qt.darker(typesOfNote.model.get(typesOfNote.currentIndex).value)
+                                    }
+                                }
                                 Layout.alignment: Qt.AlignLeft
                                 Layout.leftMargin: 10
                             }
@@ -180,7 +191,17 @@ Item {
 
                         width: 10
                         height: 10
-                        color: model.value// Используем цвет из модели
+                        gradient: Gradient{
+                            GradientStop{
+                                position:0.0
+                                color: model.value
+                            }
+                            GradientStop{
+                                position:1.0
+                                color: Qt.darker(model.value)
+                            }
+                        }
+
                         anchors{
                             left: parent.left
                             leftMargin: 5

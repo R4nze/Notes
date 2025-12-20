@@ -1,0 +1,124 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessful": true,
+                        "column": 17,
+                        "durationMicroseconds": 170,
+                        "errorMessage": "",
+                        "functionName": "source",
+                        "line": 16
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 57,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 17
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 17,
+                        "durationMicroseconds": 94,
+                        "errorMessage": "",
+                        "functionName": "radius",
+                        "line": 27
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 16,
+                        "durationMicroseconds": 130,
+                        "errorMessage": "Cannot load property pressed from const QMetaObject.",
+                        "functionName": "scale",
+                        "line": 42
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 73,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 26
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 48,
+                        "durationMicroseconds": 431,
+                        "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: conversion to QVariant -> QColor stored as QVariant",
+                        "functionName": "color",
+                        "line": 30
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 48,
+                        "durationMicroseconds": 346,
+                        "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: conversion to QVariant -> QColor stored as QVariant",
+                        "functionName": "color",
+                        "line": 31
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 60,
+                        "errorMessage": "",
+                        "functionName": "text",
+                        "line": 36
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 75,
+                        "errorMessage": "",
+                        "functionName": "visible",
+                        "line": 40
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 31,
+                        "durationMicroseconds": 37,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 35
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 58,
+                        "durationMicroseconds": 54,
+                        "errorMessage": "",
+                        "functionName": "type",
+                        "line": 44
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 86,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 50
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 56,
+                        "errorMessage": "",
+                        "functionName": "cursorShape",
+                        "line": 51
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 38,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 49
+                    }
+                ],
+                "filePath": "C:/Users/Me/Documents/GitHub/Notes/FancyButton.qml"
+            }
+        ],
+        "moduleId": "Notes(appNotes)"
+    }
+]

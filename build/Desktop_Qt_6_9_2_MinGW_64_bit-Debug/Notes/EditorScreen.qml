@@ -4,15 +4,37 @@ import QtQuick.Layouts
 import QtQml.Models
 Item {
     id: root
-
+    width: parent.width
     property alias dialogController: addDialog
     property var currentNote: null
+    property var currentColor: null
+    property bool basicColorOfType: false
 
     function changeNote(note){
-                     editorScreen.currentNote = note;
-                     nameField.text = note.NameOfNote;
-                     descriptionField.text = note.Description;
-                     textField.text = note.Text;
+                    editorScreen.currentNote = note;
+                    editorScreen.currentColor = note.color
+                    nameField.text = note.NameOfNote;
+                    descriptionField.text = note.Description;
+                    textField.text = note.Text;
+    }
+    function refreshModelNames(){
+        console.log("Работает refreshModelNames")
+        for(var i = 0; i < myModel.count; i++){
+            var item = myModel.get(i);
+            var actualName = notesManager.getTypeNameForColor(item.value);
+            if(actualName !== "" && item.key !== actualName){
+                myModel.setProperty(i, "key", actualName);
+            }
+        }
+    }
+    Connections{
+        target: notesManager
+        function onTypeModelChanged(){
+            refreshModelNames();
+        }
+    }
+    Component.onCompleted: {
+        refreshModelNames();
     }
 
     Dialog{
@@ -22,9 +44,29 @@ Item {
         width: 360
         height: 640
         standardButtons: Dialog.Apply | Dialog.Cancel
+
         background: Rectangle {
                 color: Material.background
                 radius: 0
+        }
+        onOpened: {
+            refreshModelNames();
+            if(editorScreen.currentNote){
+                var foundIndex = -1;
+                console.log("On opened открыт");
+                for(var i = 0; i < myModel.count; ++i){
+                    var item = myModel.get(i);
+                    if(item.value == editorScreen.currentColor){
+                        console.log("Цвет совпал открыт");
+                        foundIndex = i;
+                        break;
+                    }
+                }
+                typesOfNote.currentIndex = (foundIndex !== -1) ? foundIndex : 0;
+            }
+            else{
+                typesOfNote.currentIndex = 0;
+            }
         }
         onClosed: {
             // Очищаем каждое поле ввода
@@ -39,12 +81,14 @@ Item {
 
             if(editorScreen.currentNote)
             {
+                console.log("On Applied открыт");
                 notesManager.changeNote(editorScreen.currentNote,
                 nameField.text,
                 descriptionField.text,
                 textField.text,
                 selectedName,
                 selectedColor);
+                typesOfNote.currentIndex = 0;
             }
 
             else{
@@ -72,9 +116,14 @@ Item {
 
             ListModel {
                 id: myModel
-                ListElement { key: "работа"; value: "#00ffff"}
-                ListElement { key: "личное"; value: "#ff1493" }
-                ListElement { key: "другое"; value: "#b22222" }
+                ListElement { key: "Работа"; value: "#53ecec"}
+                ListElement { key: "Личное"; value: "#ee69b1" }
+                ListElement { key: "Другое"; value: "#db7093" }
+                ListElement { key: "Без названия"; value: "#90ee90"}
+                ListElement { key: "Без названия"; value: "#778899"}
+                ListElement { key: "Без названия"; value: "#fa8072"}
+                ListElement { key: "Без названия"; value: "#ff6347"}
+                ListElement { key: "Без названия"; value: "#ffff00"}
             }
 
             ComboBox {
@@ -86,7 +135,6 @@ Item {
                     topMargin: 10
                     rightMargin: 10
                 }
-
                 textRole: "key"
                 valueRole: "value"
                 model: myModel
@@ -96,6 +144,7 @@ Item {
                         height: typesOfNote.height
 
                         RowLayout {
+                            id: rowOfTextAndCyrcle
                             // Используем RowLayout для размещения кружка и текста
                             anchors.fill: parent
                             spacing: 5
@@ -106,7 +155,18 @@ Item {
                                 height: 10
                                 radius: 180
                                 // Получаем цвет из модели по текущему индексу ComboBox
-                                color: typesOfNote.model.get(typesOfNote.currentIndex).value
+                                //color: typesOfNote.model.get(typesOfNote.currentIndex).value
+
+                                gradient: Gradient{
+                                    GradientStop{
+                                        position:0.0
+                                        color: typesOfNote.model.get(typesOfNote.currentIndex).value
+                                    }
+                                    GradientStop{
+                                        position:1.0
+                                        color: Qt.darker(typesOfNote.model.get(typesOfNote.currentIndex).value)
+                                    }
+                                }
                                 Layout.alignment: Qt.AlignLeft
                                 Layout.leftMargin: 10
                             }
@@ -114,11 +174,13 @@ Item {
                             // 2. Текст (название типа)
                             Text {
                                 text: typesOfNote.currentText
+                                elide: Text.ElideRight
                                 Layout.fillWidth: true
                                 verticalAlignment: Text.AlignVCenter
                             }
                         }
                     }
+
 
                 delegate: ItemDelegate {
                     width: parent.width
@@ -129,7 +191,17 @@ Item {
 
                         width: 10
                         height: 10
-                        color: model.value // Используем цвет из модели
+                        gradient: Gradient{
+                            GradientStop{
+                                position:0.0
+                                color: model.value
+                            }
+                            GradientStop{
+                                position:1.0
+                                color: Qt.darker(model.value)
+                            }
+                        }
+
                         anchors{
                             left: parent.left
                             leftMargin: 5

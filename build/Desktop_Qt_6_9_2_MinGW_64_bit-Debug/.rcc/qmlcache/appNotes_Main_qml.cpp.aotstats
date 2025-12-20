@@ -6,135 +6,127 @@
                     {
                         "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 383,
+                        "durationMicroseconds": 236,
                         "errorMessage": "",
                         "functionName": "contentHeight",
-                        "line": 22
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 23,
-                        "durationMicroseconds": 99,
-                        "errorMessage": "",
-                        "functionName": "contentWidth",
                         "line": 23
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 19,
-                        "durationMicroseconds": 76,
+                        "column": 23,
+                        "durationMicroseconds": 59,
                         "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 15
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 21,
-                        "durationMicroseconds": 116,
-                        "errorMessage": "",
-                        "functionName": "bottom",
-                        "line": 16
+                        "functionName": "contentWidth",
+                        "line": 24
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 18,
-                        "durationMicroseconds": 101,
+                        "durationMicroseconds": 79,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 18
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 69,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 19
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 21,
+                        "durationMicroseconds": 65,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 20
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 18,
+                        "durationMicroseconds": 63,
                         "errorMessage": "",
                         "functionName": "top",
-                        "line": 17
+                        "line": 21
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 85,
+                        "durationMicroseconds": 52,
                         "errorMessage": "",
                         "functionName": "width",
-                        "line": 28
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 22,
-                        "durationMicroseconds": 142,
-                        "errorMessage": "",
-                        "functionName": "columns",
                         "line": 29
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 22,
-                        "durationMicroseconds": 107,
+                        "durationMicroseconds": 88,
                         "errorMessage": "",
-                        "functionName": "top",
-                        "line": 33
+                        "functionName": "columns",
+                        "line": 30
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 23,
-                        "durationMicroseconds": 103,
+                        "column": 22,
+                        "durationMicroseconds": 76,
                         "errorMessage": "",
-                        "functionName": "left",
+                        "functionName": "top",
                         "line": 34
                     },
                     {
                         "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 68,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 35
+                    },
+                    {
+                        "codegenSuccessful": true,
                         "column": 24,
-                        "durationMicroseconds": 101,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "right",
-                        "line": 35
+                        "line": 36
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 281,
+                        "durationMicroseconds": 176,
                         "errorMessage": "Cannot access value for name notesManager",
                         "functionName": "model",
-                        "line": 42
+                        "line": 43
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 29,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 41,
                         "errorMessage": "Cannot access value for name notesGrid",
                         "functionName": "height",
-                        "line": 46
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 28,
-                        "durationMicroseconds": 72,
-                        "errorMessage": "Cannot access value for name notesGrid",
-                        "functionName": "width",
                         "line": 47
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 34,
-                        "durationMicroseconds": 39,
+                        "column": 28,
+                        "durationMicroseconds": 41,
                         "errorMessage": "Cannot access value for name notesGrid",
-                        "functionName": "visible",
-                        "line": 52
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 46,
-                        "durationMicroseconds": 108,
-                        "errorMessage": "",
-                        "functionName": "horizontalAlignment",
-                        "line": 66
+                        "functionName": "width",
+                        "line": 48
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 31,
-                        "durationMicroseconds": 503,
-                        "errorMessage": "Cannot access value for name modelData",
-                        "functionName": "text",
-                        "line": 67
+                        "column": 34,
+                        "durationMicroseconds": 21,
+                        "errorMessage": "Cannot access value for name notesGrid",
+                        "functionName": "visible",
+                        "line": 59
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 34,
-                        "durationMicroseconds": 254,
+                        "durationMicroseconds": 72,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 54
@@ -142,7 +134,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 35,
-                        "durationMicroseconds": 134,
+                        "durationMicroseconds": 72,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 55
@@ -150,7 +142,7 @@
                     {
                         "codegenSuccessful": true,
                         "column": 36,
-                        "durationMicroseconds": 137,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 56
@@ -158,602 +150,1170 @@
                     {
                         "codegenSuccessful": true,
                         "column": 36,
-                        "durationMicroseconds": 178,
+                        "durationMicroseconds": 75,
                         "errorMessage": "",
                         "functionName": "angle",
-                        "line": 61
+                        "line": 64
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 186,
+                        "durationMicroseconds": 82,
                         "errorMessage": "",
                         "functionName": "x",
-                        "line": 59
+                        "line": 62
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 147,
+                        "durationMicroseconds": 82,
                         "errorMessage": "",
                         "functionName": "y",
-                        "line": 60
+                        "line": 63
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 32,
-                        "durationMicroseconds": 538,
-                        "errorMessage": "Cannot access value for name notesManager",
-                        "functionName": "color",
-                        "line": 74
+                        "column": 35,
+                        "durationMicroseconds": 281,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "text",
+                        "line": 70
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 68,
+                        "column": 47,
+                        "durationMicroseconds": 41,
                         "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 72
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 39,
-                        "durationMicroseconds": 96,
-                        "errorMessage": "Cannot access value for name isSelectedItem",
-                        "functionName": "color",
-                        "line": 76
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 39,
-                        "durationMicroseconds": 67,
-                        "errorMessage": "Cannot access value for name isSelectedItem",
-                        "functionName": "width",
-                        "line": 78
+                        "functionName": "centerIn",
+                        "line": 73
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 38,
-                        "durationMicroseconds": 44,
-                        "errorMessage": "Cannot access value for name notesGrid",
+                        "durationMicroseconds": 196,
+                        "errorMessage": "Cannot access value for name modelData",
                         "functionName": "visible",
                         "line": 82
                     },
                     {
-                        "codegenSuccessful": false,
-                        "column": 35,
-                        "durationMicroseconds": 428,
-                        "errorMessage": "Cannot access value for name modelData",
-                        "functionName": "text",
-                        "line": 89
-                    },
-                    {
                         "codegenSuccessful": true,
                         "column": 40,
-                        "durationMicroseconds": 125,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "right",
-                        "line": 84
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 41,
-                        "durationMicroseconds": 96,
-                        "errorMessage": "",
-                        "functionName": "bottom",
                         "line": 85
                     },
                     {
-                        "codegenSuccessful": false,
-                        "column": 35,
-                        "durationMicroseconds": 323,
-                        "errorMessage": "Cannot access value for name modelData",
-                        "functionName": "text",
+                        "codegenSuccessful": true,
+                        "column": 49,
+                        "durationMicroseconds": 61,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 86
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 43,
+                        "durationMicroseconds": 34,
+                        "errorMessage": "",
+                        "functionName": "fill",
                         "line": 94
                     },
                     {
-                        "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 92,
-                        "errorMessage": "",
-                        "functionName": "wrapMode",
-                        "line": 105
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 36,
-                        "durationMicroseconds": 82,
-                        "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 106
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 38,
-                        "durationMicroseconds": 108,
-                        "errorMessage": "",
-                        "functionName": "top",
-                        "line": 97
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 136,
-                        "errorMessage": "",
-                        "functionName": "left",
+                        "codegenSuccessful": false,
+                        "column": 44,
+                        "durationMicroseconds": 44,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "color",
                         "line": 98
                     },
                     {
-                        "codegenSuccessful": true,
-                        "column": 40,
-                        "durationMicroseconds": 87,
-                        "errorMessage": "",
-                        "functionName": "right",
-                        "line": 99
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 41,
-                        "durationMicroseconds": 96,
-                        "errorMessage": "",
-                        "functionName": "bottom",
-                        "line": 100
+                        "codegenSuccessful": false,
+                        "column": 44,
+                        "durationMicroseconds": 47,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "color",
+                        "line": 102
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 50,
-                        "durationMicroseconds": 93,
+                        "column": 43,
+                        "durationMicroseconds": 54,
+                        "errorMessage": "Cannot access value for name isSelectedItem",
+                        "functionName": "color",
+                        "line": 113
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 43,
+                        "durationMicroseconds": 36,
+                        "errorMessage": "Cannot access value for name isSelectedItem",
+                        "functionName": "width",
+                        "line": 115
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 42,
+                        "durationMicroseconds": 22,
                         "errorMessage": "Cannot access value for name notesGrid",
-                        "functionName": "horizontalAlignment",
+                        "functionName": "visible",
                         "line": 119
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 35,
-                        "durationMicroseconds": 337,
+                        "column": 39,
+                        "durationMicroseconds": 243,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "text",
-                        "line": 120
+                        "line": 126
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 96,
+                        "column": 44,
+                        "durationMicroseconds": 66,
                         "errorMessage": "",
-                        "functionName": "wrapMode",
+                        "functionName": "right",
+                        "line": 121
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 45,
+                        "durationMicroseconds": 62,
+                        "errorMessage": "",
+                        "functionName": "bottom",
                         "line": 122
                     },
                     {
-                        "codegenSuccessful": true,
-                        "column": 36,
-                        "durationMicroseconds": 93,
-                        "errorMessage": "",
-                        "functionName": "elide",
-                        "line": 123
-                    },
-                    {
-                        "codegenSuccessful": true,
+                        "codegenSuccessful": false,
                         "column": 39,
-                        "durationMicroseconds": 104,
-                        "errorMessage": "",
-                        "functionName": "left",
-                        "line": 112
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 40,
-                        "durationMicroseconds": 100,
-                        "errorMessage": "",
-                        "functionName": "right",
-                        "line": 113
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 41,
-                        "durationMicroseconds": 95,
-                        "errorMessage": "",
-                        "functionName": "bottom",
-                        "line": 114
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 58,
-                        "errorMessage": "",
-                        "functionName": "fill",
+                        "durationMicroseconds": 192,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "text",
                         "line": 131
                     },
                     {
-                        "codegenSuccessful": false,
-                        "column": 35,
-                        "durationMicroseconds": 331,
-                        "errorMessage": "Cannot access value for name modelData",
-                        "functionName": "text",
+                        "codegenSuccessful": true,
+                        "column": 43,
+                        "durationMicroseconds": 88,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
                         "line": 142
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 94,
+                        "column": 40,
+                        "durationMicroseconds": 66,
                         "errorMessage": "",
-                        "functionName": "wrapMode",
+                        "functionName": "elide",
                         "line": 143
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 59,
+                        "column": 42,
+                        "durationMicroseconds": 90,
                         "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 140
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 38,
-                        "durationMicroseconds": 47,
-                        "errorMessage": "Cannot access value for name notesGrid",
-                        "functionName": "visible",
-                        "line": 148
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 35,
-                        "durationMicroseconds": 444,
-                        "errorMessage": "Cannot access value for name modelData",
-                        "functionName": "text",
-                        "line": 155
+                        "functionName": "top",
+                        "line": 134
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 41,
-                        "durationMicroseconds": 130,
+                        "column": 43,
+                        "durationMicroseconds": 75,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 135
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 44,
+                        "durationMicroseconds": 75,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 136
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 45,
+                        "durationMicroseconds": 64,
                         "errorMessage": "",
                         "functionName": "bottom",
-                        "line": 150
+                        "line": 137
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 54,
+                        "durationMicroseconds": 92,
+                        "errorMessage": "Cannot access value for name notesGrid",
+                        "functionName": "horizontalAlignment",
+                        "line": 156
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 39,
+                        "durationMicroseconds": 218,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "text",
+                        "line": 157
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 43,
+                        "durationMicroseconds": 53,
+                        "errorMessage": "",
+                        "functionName": "wrapMode",
+                        "line": 159
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 40,
-                        "durationMicroseconds": 105,
+                        "durationMicroseconds": 45,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 160
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 43,
+                        "durationMicroseconds": 67,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 149
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 44,
+                        "durationMicroseconds": 62,
                         "errorMessage": "",
                         "functionName": "right",
+                        "line": 150
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 45,
+                        "durationMicroseconds": 82,
+                        "errorMessage": "",
+                        "functionName": "bottom",
                         "line": 151
                     },
                     {
-                        "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 141,
-                        "errorMessage": "",
-                        "functionName": "x",
-                        "line": 161
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 39,
-                        "durationMicroseconds": 125,
-                        "errorMessage": "",
-                        "functionName": "y",
-                        "line": 162
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 48,
-                        "durationMicroseconds": 138,
-                        "errorMessage": "",
-                        "functionName": "y",
-                        "line": 163
-                    },
-                    {
-                        "codegenSuccessful": true,
+                        "codegenSuccessful": false,
                         "column": 32,
-                        "durationMicroseconds": 88,
+                        "durationMicroseconds": 267,
+                        "errorMessage": "Cannot access value for name notesManager",
+                        "functionName": "color",
+                        "line": 169
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 45,
                         "errorMessage": "",
-                        "functionName": "when",
+                        "functionName": "fill",
                         "line": 168
                     },
                     {
-                        "codegenSuccessful": true,
-                        "column": 51,
-                        "durationMicroseconds": 77,
-                        "errorMessage": "",
-                        "functionName": "target",
-                        "line": 167
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 51,
-                        "durationMicroseconds": 71,
-                        "errorMessage": "",
-                        "functionName": "target",
-                        "line": 172
+                        "codegenSuccessful": false,
+                        "column": 39,
+                        "durationMicroseconds": 74,
+                        "errorMessage": "Cannot access value for name isSelectedItem",
+                        "functionName": "color",
+                        "line": 170
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 34,
-                        "durationMicroseconds": 51,
-                        "errorMessage": "Cannot access value for name isDeleteMode",
-                        "functionName": "enabled",
-                        "line": 178
+                        "column": 39,
+                        "durationMicroseconds": 38,
+                        "errorMessage": "Cannot access value for name isSelectedItem",
+                        "functionName": "width",
+                        "line": 171
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 36,
-                        "durationMicroseconds": 1041,
-                        "errorMessage": "Cannot access value for name notesManager",
-                        "functionName": "onClicked",
+                        "column": 35,
+                        "durationMicroseconds": 199,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "text",
                         "line": 180
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 97,
+                        "durationMicroseconds": 55,
                         "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 177
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 34,
-                        "durationMicroseconds": 50,
-                        "errorMessage": "Cannot access value for name isDeleteMode",
-                        "functionName": "enabled",
-                        "line": 195
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 50,
-                        "durationMicroseconds": 275,
-                        "errorMessage": "",
-                        "functionName": "pressPos",
-                        "line": 196
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 35,
-                        "durationMicroseconds": 309,
-                        "errorMessage": "",
-                        "functionName": "onPressed",
-                        "line": 214
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 35,
-                        "durationMicroseconds": 46,
-                        "errorMessage": "",
-                        "functionName": "onPressed",
-                        "line": 214
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 44,
-                        "durationMicroseconds": 772,
-                        "errorMessage": "",
-                        "functionName": "onPositionChanged",
-                        "line": 220
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 44,
-                        "durationMicroseconds": 57,
-                        "errorMessage": "",
-                        "functionName": "onPositionChanged",
-                        "line": 220
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 37,
-                        "durationMicroseconds": 650,
-                        "errorMessage": "Cannot access value for name isDeleteMode",
-                        "functionName": "onReleased",
-                        "line": 226
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 37,
-                        "durationMicroseconds": 59,
-                        "errorMessage": "",
-                        "functionName": "onReleased",
-                        "line": 226
+                        "functionName": "wrapMode",
+                        "line": 181
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 39,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 37,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 194
+                        "line": 178
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 42,
-                        "durationMicroseconds": 210,
-                        "errorMessage": "Cannot find name isDeleteMode",
-                        "functionName": "onTriggered",
+                        "column": 38,
+                        "durationMicroseconds": 24,
+                        "errorMessage": "Cannot access value for name notesGrid",
+                        "functionName": "visible",
+                        "line": 186
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 35,
+                        "durationMicroseconds": 255,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "text",
+                        "line": 193
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 41,
+                        "durationMicroseconds": 72,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 188
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 40,
+                        "durationMicroseconds": 61,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 189
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 84,
+                        "errorMessage": "",
+                        "functionName": "x",
+                        "line": 199
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 78,
+                        "errorMessage": "",
+                        "functionName": "y",
+                        "line": 200
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 48,
+                        "durationMicroseconds": 91,
+                        "errorMessage": "",
+                        "functionName": "y",
+                        "line": 201
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 51,
+                        "errorMessage": "",
+                        "functionName": "when",
                         "line": 206
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 16,
-                        "durationMicroseconds": 86,
+                        "column": 51,
+                        "durationMicroseconds": 43,
                         "errorMessage": "",
-                        "functionName": "width",
-                        "line": 250
+                        "functionName": "target",
+                        "line": 205
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 22,
-                        "durationMicroseconds": 106,
+                        "column": 51,
+                        "durationMicroseconds": 42,
                         "errorMessage": "",
-                        "functionName": "top",
-                        "line": 251
+                        "functionName": "target",
+                        "line": 210
                     },
                     {
                         "codegenSuccessful": false,
-                        "column": 22,
-                        "durationMicroseconds": 33,
+                        "column": 34,
+                        "durationMicroseconds": 22,
+                        "errorMessage": "Cannot access value for name isDeleteMode",
+                        "functionName": "enabled",
+                        "line": 216
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 621,
+                        "errorMessage": "Cannot access value for name notesManager",
+                        "functionName": "onClicked",
+                        "line": 218
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 48,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 215
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 34,
+                        "durationMicroseconds": 23,
+                        "errorMessage": "Cannot access value for name isDeleteMode",
+                        "functionName": "enabled",
+                        "line": 233
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 50,
+                        "durationMicroseconds": 169,
+                        "errorMessage": "",
+                        "functionName": "pressPos",
+                        "line": 234
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 194,
+                        "errorMessage": "",
+                        "functionName": "onPressed",
+                        "line": 252
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 30,
+                        "errorMessage": "",
+                        "functionName": "onPressed",
+                        "line": 252
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 44,
+                        "durationMicroseconds": 519,
+                        "errorMessage": "",
+                        "functionName": "onPositionChanged",
+                        "line": 258
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 44,
+                        "durationMicroseconds": 30,
+                        "errorMessage": "",
+                        "functionName": "onPositionChanged",
+                        "line": 258
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 37,
+                        "durationMicroseconds": 363,
+                        "errorMessage": "Cannot access value for name isDeleteMode",
+                        "functionName": "onReleased",
+                        "line": 265
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 37,
+                        "durationMicroseconds": 30,
+                        "errorMessage": "",
+                        "functionName": "onReleased",
+                        "line": 265
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 39,
+                        "durationMicroseconds": 38,
+                        "errorMessage": "",
+                        "functionName": "fill",
+                        "line": 232
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 42,
+                        "durationMicroseconds": 127,
+                        "errorMessage": "Cannot find name isDeleteMode",
+                        "functionName": "onTriggered",
+                        "line": 244
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 18,
+                        "durationMicroseconds": 87,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 290
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 75,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 291
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 66,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 292
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 47,
+                        "errorMessage": "",
+                        "functionName": "width",
+                        "line": 309
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 21,
+                        "durationMicroseconds": 73,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 311
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 67,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 312
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 65,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 313
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 18,
+                        "durationMicroseconds": 38,
                         "errorMessage": "Cannot access value for name isDeleteMode",
                         "functionName": "visible",
-                        "line": 256
+                        "line": 329
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 204,
+                        "errorMessage": "Cannot access value for name isDeleteMode",
+                        "functionName": "onClicked",
+                        "line": 341
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 66,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 334
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 18,
+                        "durationMicroseconds": 60,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 335
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 18,
+                        "durationMicroseconds": 16,
+                        "errorMessage": "Cannot access value for name isDeleteMode",
+                        "functionName": "visible",
+                        "line": 350
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 257,
+                        "errorMessage": "Cannot access value for name notesManager",
+                        "functionName": "onClicked",
+                        "line": 364
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 63,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 355
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 18,
+                        "durationMicroseconds": 57,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 356
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 18,
+                        "durationMicroseconds": 15,
+                        "errorMessage": "Cannot access value for name isDeleteMode",
+                        "functionName": "visible",
+                        "line": 373
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 19,
+                        "durationMicroseconds": 146,
+                        "errorMessage": "Cannot access value for name notesManager",
+                        "functionName": "onClicked",
+                        "line": 386
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 66,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 378
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 18,
+                        "durationMicroseconds": 58,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 379
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 20,
+                        "durationMicroseconds": 61,
+                        "errorMessage": "Cannot access value for name isDeleteMode",
+                        "functionName": "onClicked",
+                        "line": 405
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 104,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 398
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 21,
+                        "durationMicroseconds": 58,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 399
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 119,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 427
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 62,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 420
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 18,
+                        "durationMicroseconds": 57,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 421
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 87,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 456
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 60,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 433
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 21,
+                        "durationMicroseconds": 56,
+                        "errorMessage": "",
+                        "functionName": "bottom",
+                        "line": 434
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 48,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 451
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 108,
+                        "durationMicroseconds": 60,
                         "errorMessage": "",
                         "functionName": "left",
-                        "line": 261
+                        "line": 445
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 24,
+                        "durationMicroseconds": 56,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 446
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 22,
+                        "durationMicroseconds": 54,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 447
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 25,
-                        "durationMicroseconds": 96,
+                        "durationMicroseconds": 59,
                         "errorMessage": "",
                         "functionName": "bottom",
-                        "line": 262
+                        "line": 448
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 62,
+                        "errorMessage": "",
+                        "functionName": "onClicked",
+                        "line": 478
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 20,
+                        "durationMicroseconds": 76,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 469
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 18,
+                        "durationMicroseconds": 96,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 470
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 21,
+                        "durationMicroseconds": 47,
+                        "errorMessage": "",
+                        "functionName": "parent",
+                        "line": 483
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 83,
+                        "errorMessage": "",
+                        "functionName": "x",
+                        "line": 487
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 16,
+                        "durationMicroseconds": 131,
+                        "errorMessage": "",
+                        "functionName": "y",
+                        "line": 488
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 30,
+                        "durationMicroseconds": 90,
+                        "errorMessage": "",
+                        "functionName": "onTriggered",
+                        "line": 520
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 77,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 504
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 60,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 505
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 43,
+                        "errorMessage": "Cannot load property text from (component in C:/Users/Me/Documents/GitHub/Notes/Main.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 509
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 42,
+                        "durationMicroseconds": 53,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 512
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 40,
+                        "durationMicroseconds": 44,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 513
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 42,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 514
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 28,
-                        "durationMicroseconds": 71,
-                        "errorMessage": "Cannot access value for name isDeleteMode",
-                        "functionName": "onClicked",
-                        "line": 269
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 31,
-                        "durationMicroseconds": 63,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 268
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 16,
-                        "durationMicroseconds": 126,
-                        "errorMessage": "",
-                        "functionName": "width",
-                        "line": 282
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 25,
-                        "durationMicroseconds": 183,
-                        "errorMessage": "",
-                        "functionName": "bottom",
-                        "line": 283
-                    },
-                    {
-                        "codegenSuccessful": false,
-                        "column": 22,
-                        "durationMicroseconds": 33,
-                        "errorMessage": "Cannot access value for name isDeleteMode",
-                        "functionName": "visible",
-                        "line": 288
+                        "durationMicroseconds": 66,
+                        "errorMessage": "Cannot load property highlighted from (component in C:/Users/Me/Documents/GitHub/Notes/Main.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 517
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 23,
-                        "durationMicroseconds": 109,
+                        "durationMicroseconds": 103,
                         "errorMessage": "",
-                        "functionName": "left",
-                        "line": 293
+                        "functionName": "text",
+                        "line": 524
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 22,
-                        "durationMicroseconds": 106,
+                        "column": 30,
+                        "durationMicroseconds": 171,
                         "errorMessage": "",
-                        "functionName": "top",
-                        "line": 294
+                        "functionName": "onTriggered",
+                        "line": 543
                     },
                     {
-                        "codegenSuccessful": false,
+                        "codegenSuccessful": true,
                         "column": 27,
-                        "durationMicroseconds": 360,
-                        "errorMessage": "Cannot access value for name notesManager",
-                        "functionName": "onClicked",
-                        "line": 300
-                    },
-                    {
-                        "codegenSuccessful": true,
-                        "column": 31,
                         "durationMicroseconds": 68,
                         "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 299
+                        "functionName": "left",
+                        "line": 527
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 59,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 528
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 41,
+                        "errorMessage": "Cannot load property text from (component in C:/Users/Me/Documents/GitHub/Notes/Main.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 532
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 42,
+                        "durationMicroseconds": 52,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 535
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 40,
+                        "durationMicroseconds": 58,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 536
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 51,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 537
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 61,
+                        "errorMessage": "Cannot load property highlighted from (component in C:/Users/Me/Documents/GitHub/Notes/Main.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 540
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 36,
+                        "durationMicroseconds": 51,
+                        "errorMessage": "",
+                        "functionName": "implicitWidth",
+                        "line": 551
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 23,
+                        "durationMicroseconds": 27,
+                        "errorMessage": "Cannot access value for name isDeleteMode",
+                        "functionName": "text",
+                        "line": 558
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 30,
+                        "durationMicroseconds": 393,
+                        "errorMessage": "Cannot access value for name isDeleteMode",
+                        "functionName": "onTriggered",
+                        "line": 577
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 27,
+                        "durationMicroseconds": 168,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 561
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 61,
+                        "errorMessage": "",
+                        "functionName": "right",
+                        "line": 562
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 27,
+                        "durationMicroseconds": 43,
+                        "errorMessage": "Cannot load property text from (component in C:/Users/Me/Documents/GitHub/Notes/Main.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
+                        "line": 566
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 42,
+                        "durationMicroseconds": 51,
+                        "errorMessage": "",
+                        "functionName": "horizontalAlignment",
+                        "line": 569
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 40,
+                        "durationMicroseconds": 43,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 570
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 28,
+                        "durationMicroseconds": 42,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 571
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 28,
+                        "durationMicroseconds": 62,
+                        "errorMessage": "Cannot load property highlighted from (component in C:/Users/Me/Documents/GitHub/Notes/Main.qml)::parent with type QQuickItem.",
+                        "functionName": "color",
+                        "line": 574
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 23,
+                        "durationMicroseconds": 99,
+                        "errorMessage": "",
+                        "functionName": "contentWidth",
+                        "line": 593
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 29,
+                        "durationMicroseconds": 47,
+                        "errorMessage": "",
+                        "functionName": "flickableDirection",
+                        "line": 594
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 19,
+                        "durationMicroseconds": 62,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 587
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 20,
-                        "durationMicroseconds": 111,
+                        "durationMicroseconds": 63,
                         "errorMessage": "",
                         "functionName": "right",
-                        "line": 316
+                        "line": 588
                     },
                     {
                         "codegenSuccessful": true,
                         "column": 21,
-                        "durationMicroseconds": 101,
+                        "durationMicroseconds": 57,
                         "errorMessage": "",
                         "functionName": "bottom",
-                        "line": 317
+                        "line": 589
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 37,
+                        "durationMicroseconds": 63,
+                        "errorMessage": "",
+                        "functionName": "verticalCenter",
+                        "line": 599
                     },
                     {
                         "codegenSuccessful": false,
                         "column": 24,
-                        "durationMicroseconds": 121,
-                        "errorMessage": "Cannot access value for name isDeleteMode",
-                        "functionName": "onClicked",
-                        "line": 323
+                        "durationMicroseconds": 136,
+                        "errorMessage": "Cannot access value for name notesManager",
+                        "functionName": "model",
+                        "line": 602
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 27,
-                        "durationMicroseconds": 66,
+                        "column": 38,
+                        "durationMicroseconds": 56,
                         "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 322
+                        "functionName": "orientation",
+                        "line": 608
                     },
                     {
-                        "codegenSuccessful": true,
-                        "column": 16,
-                        "durationMicroseconds": 268,
-                        "errorMessage": "",
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 38,
+                        "errorMessage": "Cannot access value for name modelData",
                         "functionName": "color",
-                        "line": 340
+                        "line": 612
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 46,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "color",
+                        "line": 616
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 20,
-                        "durationMicroseconds": 114,
+                        "column": 44,
+                        "durationMicroseconds": 50,
+                        "errorMessage": "",
+                        "functionName": "verticalAlignment",
+                        "line": 632
+                    },
+                    {
+                        "codegenSuccessful": false,
+                        "column": 31,
+                        "durationMicroseconds": 216,
+                        "errorMessage": "Cannot access value for name modelData",
+                        "functionName": "text",
+                        "line": 633
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 32,
+                        "durationMicroseconds": 57,
+                        "errorMessage": "",
+                        "functionName": "elide",
+                        "line": 634
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 35,
+                        "durationMicroseconds": 85,
+                        "errorMessage": "",
+                        "functionName": "left",
+                        "line": 626
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 36,
+                        "durationMicroseconds": 75,
                         "errorMessage": "",
                         "functionName": "right",
-                        "line": 342
+                        "line": 627
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 21,
-                        "durationMicroseconds": 129,
+                        "column": 34,
+                        "durationMicroseconds": 100,
+                        "errorMessage": "",
+                        "functionName": "top",
+                        "line": 628
+                    },
+                    {
+                        "codegenSuccessful": true,
+                        "column": 37,
+                        "durationMicroseconds": 112,
                         "errorMessage": "",
                         "functionName": "bottom",
-                        "line": 343
+                        "line": 629
                     },
                     {
-                        "codegenSuccessful": true,
-                        "column": 24,
-                        "durationMicroseconds": 314,
-                        "errorMessage": "",
+                        "codegenSuccessful": false,
+                        "column": 36,
+                        "durationMicroseconds": 313,
+                        "errorMessage": "Cannot access value for name notesManager",
                         "functionName": "onClicked",
-                        "line": 349
+                        "line": 639
                     },
                     {
                         "codegenSuccessful": true,
-                        "column": 27,
-                        "durationMicroseconds": 45,
+                        "column": 38,
+                        "durationMicroseconds": 40,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 348
+                        "line": 638
                     }
                 ],
                 "filePath": "C:/Users/Me/Documents/GitHub/Notes/Main.qml"

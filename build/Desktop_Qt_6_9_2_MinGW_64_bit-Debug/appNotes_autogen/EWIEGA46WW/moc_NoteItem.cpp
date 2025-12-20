@@ -46,12 +46,15 @@ template <> constexpr inline auto NoteItem::qt_create_metaobjectdata<qt_meta_tag
         "LastDateOfRedactChanged",
         "idOfTypeChanged",
         "colorChanged",
+        "isFavoriteChanged",
         "NameOfNote",
         "Description",
         "Text",
         "LastDateOfRedact",
         "idOfType",
-        "color"
+        "color",
+        "id",
+        "isFavorite"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -67,20 +70,26 @@ template <> constexpr inline auto NoteItem::qt_create_metaobjectdata<qt_meta_tag
         QtMocHelpers::SignalData<void()>(6, 2, QMC::AccessPublic, QMetaType::Void),
         // Signal 'colorChanged'
         QtMocHelpers::SignalData<void()>(7, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'isFavoriteChanged'
+        QtMocHelpers::SignalData<void()>(8, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
         // property 'NameOfNote'
-        QtMocHelpers::PropertyData<QString>(8, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 0),
+        QtMocHelpers::PropertyData<QString>(9, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 0),
         // property 'Description'
-        QtMocHelpers::PropertyData<QString>(9, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 1),
+        QtMocHelpers::PropertyData<QString>(10, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 1),
         // property 'Text'
-        QtMocHelpers::PropertyData<QString>(10, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 2),
+        QtMocHelpers::PropertyData<QString>(11, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 2),
         // property 'LastDateOfRedact'
-        QtMocHelpers::PropertyData<QDateTime>(11, QMetaType::QDateTime, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 3),
+        QtMocHelpers::PropertyData<QDateTime>(12, QMetaType::QDateTime, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 3),
         // property 'idOfType'
-        QtMocHelpers::PropertyData<int>(12, QMetaType::Int, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 4),
+        QtMocHelpers::PropertyData<int>(13, QMetaType::Int, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 4),
         // property 'color'
-        QtMocHelpers::PropertyData<QColor>(13, QMetaType::QColor, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 5),
+        QtMocHelpers::PropertyData<QColor>(14, QMetaType::QColor, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 5),
+        // property 'id'
+        QtMocHelpers::PropertyData<int>(15, QMetaType::Int, QMC::DefaultPropertyFlags | QMC::Constant),
+        // property 'isFavorite'
+        QtMocHelpers::PropertyData<bool>(16, QMetaType::Bool, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet | QMC::Final, 6),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -108,6 +117,7 @@ void NoteItem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 3: _t->LastDateOfRedactChanged(); break;
         case 4: _t->idOfTypeChanged(); break;
         case 5: _t->colorChanged(); break;
+        case 6: _t->isFavoriteChanged(); break;
         default: ;
         }
     }
@@ -124,6 +134,8 @@ void NoteItem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
             return;
         if (QtMocHelpers::indexOfMethod<void (NoteItem::*)()>(_a, &NoteItem::colorChanged, 5))
             return;
+        if (QtMocHelpers::indexOfMethod<void (NoteItem::*)()>(_a, &NoteItem::isFavoriteChanged, 6))
+            return;
     }
     if (_c == QMetaObject::ReadProperty) {
         void *_v = _a[0];
@@ -134,6 +146,8 @@ void NoteItem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 3: *reinterpret_cast<QDateTime*>(_v) = _t->LastDateOfRedact(); break;
         case 4: *reinterpret_cast<int*>(_v) = _t->idOfType(); break;
         case 5: *reinterpret_cast<QColor*>(_v) = _t->color(); break;
+        case 6: *reinterpret_cast<int*>(_v) = _t->id(); break;
+        case 7: *reinterpret_cast<bool*>(_v) = _t->isFavorite(); break;
         default: break;
         }
     }
@@ -146,6 +160,7 @@ void NoteItem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 3: _t->setLastDateOfRedact(*reinterpret_cast<QDateTime*>(_v)); break;
         case 4: _t->setIdOfType(*reinterpret_cast<int*>(_v)); break;
         case 5: _t->setColor(*reinterpret_cast<QColor*>(_v)); break;
+        case 7: _t->setIsFavorite(*reinterpret_cast<bool*>(_v)); break;
         default: break;
         }
     }
@@ -170,20 +185,20 @@ int NoteItem::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 7;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 8;
     }
     return _id;
 }
@@ -222,5 +237,11 @@ void NoteItem::idOfTypeChanged()
 void NoteItem::colorChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 5, nullptr);
+}
+
+// SIGNAL 6
+void NoteItem::isFavoriteChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 6, nullptr);
 }
 QT_WARNING_POP

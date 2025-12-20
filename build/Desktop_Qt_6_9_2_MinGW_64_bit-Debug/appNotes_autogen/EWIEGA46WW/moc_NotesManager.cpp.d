@@ -1,8 +1,11 @@
 C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appNotes_autogen/EWIEGA46WW/moc_NotesManager.cpp: C:/Users/Me/Documents/GitHub/Notes/NotesManager.h \
   C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/appNotes_autogen/moc_predefs.h \
+  C:/Users/Me/Documents/GitHub/Notes/DatabaseHandler.h \
   C:/Users/Me/Documents/GitHub/Notes/NoteItem.h \
   C:/Users/Me/Documents/GitHub/Notes/Type.h \
+  D:/Qt/6.9.2/mingw_64/include/QtCore/QCoreApplication \
   D:/Qt/6.9.2/mingw_64/include/QtCore/QDateTime \
+  D:/Qt/6.9.2/mingw_64/include/QtCore/QDebug \
   D:/Qt/6.9.2/mingw_64/include/QtCore/QList \
   D:/Qt/6.9.2/mingw_64/include/QtCore/QObject \
   D:/Qt/6.9.2/mingw_64/include/QtCore/q17memory.h \
@@ -11,6 +14,7 @@ C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app
   D:/Qt/6.9.2/mingw_64/include/QtCore/q20type_traits.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/q20utility.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/q23utility.h \
+  D:/Qt/6.9.2/mingw_64/include/QtCore/qabstracteventdispatcher.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qalgorithms.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qanystringview.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qarraydata.h \
@@ -20,6 +24,7 @@ C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app
   D:/Qt/6.9.2/mingw_64/include/QtCore/qatomic.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qatomic_cxx11.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qbasicatomic.h \
+  D:/Qt/6.9.2/mingw_64/include/QtCore/qbasictimer.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qbindingstorage.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qbytearray.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qbytearrayalgorithms.h \
@@ -37,10 +42,16 @@ C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app
   D:/Qt/6.9.2/mingw_64/include/QtCore/qcontainerinfo.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qcontainertools_impl.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qcontiguouscache.h \
+  D:/Qt/6.9.2/mingw_64/include/QtCore/qcoreapplication.h \
+  D:/Qt/6.9.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
+  D:/Qt/6.9.2/mingw_64/include/QtCore/qcoreevent.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qdarwinhelpers.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qdatastream.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qdatetime.h \
+  D:/Qt/6.9.2/mingw_64/include/QtCore/qdeadlinetimer.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qdebug.h \
+  D:/Qt/6.9.2/mingw_64/include/QtCore/qelapsedtimer.h \
+  D:/Qt/6.9.2/mingw_64/include/QtCore/qeventloop.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qexceptionhandling.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qflags.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qfloat16.h \
@@ -63,9 +74,11 @@ C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app
   D:/Qt/6.9.2/mingw_64/include/QtCore/qmap.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qmath.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qmetacontainer.h \
+  D:/Qt/6.9.2/mingw_64/include/QtCore/qmetaobject.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qmetatype.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qminmax.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qnamespace.h \
+  D:/Qt/6.9.2/mingw_64/include/QtCore/qnativeinterface.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qnumeric.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qobject.h \
   D:/Qt/6.9.2/mingw_64/include/QtCore/qobject_impl.h \
@@ -132,6 +145,15 @@ C:/Users/Me/Documents/GitHub/Notes/build/Desktop_Qt_6_9_2_MinGW_64_bit-Debug/app
   D:/Qt/6.9.2/mingw_64/include/QtGui/qtgui-config.h \
   D:/Qt/6.9.2/mingw_64/include/QtGui/qtguiexports.h \
   D:/Qt/6.9.2/mingw_64/include/QtGui/qtguiglobal.h \
+  D:/Qt/6.9.2/mingw_64/include/QtSql/QSqlDatabase \
+  D:/Qt/6.9.2/mingw_64/include/QtSql/QSqlError \
+  D:/Qt/6.9.2/mingw_64/include/QtSql/QSqlQuery \
+  D:/Qt/6.9.2/mingw_64/include/QtSql/qsqldatabase.h \
+  D:/Qt/6.9.2/mingw_64/include/QtSql/qsqlerror.h \
+  D:/Qt/6.9.2/mingw_64/include/QtSql/qsqlquery.h \
+  D:/Qt/6.9.2/mingw_64/include/QtSql/qtsql-config.h \
+  D:/Qt/6.9.2/mingw_64/include/QtSql/qtsqlexports.h \
+  D:/Qt/6.9.2/mingw_64/include/QtSql/qtsqlglobal.h \
   D:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm \
   D:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array \
   D:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/atomic \

@@ -3,5 +3,9 @@ typeinfo appNotes.qmltypes
 prefer :/qt/qml/Notes/
 Main 1.0 Main.qml
 EditorScreen 1.0 EditorScreen.qml
+EditorType 1.0 EditorType.qml
+SortNotes 1.0 SortNotes.qml
+SearchEditor 1.0 SearchEditor.qml
+FancyButton 1.0 FancyButton.qml
 depends QtQuick
 

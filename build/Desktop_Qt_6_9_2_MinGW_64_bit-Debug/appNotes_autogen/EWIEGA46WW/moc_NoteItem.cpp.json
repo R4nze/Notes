@@ -94,6 +94,34 @@
                     "type": "QColor",
                     "user": false,
                     "write": "setColor"
+                },
+                {
+                    "constant": true,
+                    "designable": true,
+                    "final": false,
+                    "index": 6,
+                    "name": "id",
+                    "read": "id",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": true,
+                    "index": 7,
+                    "name": "isFavorite",
+                    "notify": "isFavoriteChanged",
+                    "read": "isFavorite",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false,
+                    "write": "setIsFavorite"
                 }
             ],
             "qualifiedClassName": "NoteItem",
@@ -132,6 +160,12 @@
                     "access": "public",
                     "index": 5,
                     "name": "colorChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 6,
+                    "name": "isFavoriteChanged",
                     "returnType": "void"
                 }
             ],

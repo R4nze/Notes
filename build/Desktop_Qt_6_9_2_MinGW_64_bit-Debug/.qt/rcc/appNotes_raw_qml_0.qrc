@@ -2,6 +2,10 @@
   <qresource prefix="/qt/qml/Notes/">
     <file alias="Main.qml">C:/Users/Me/Documents/GitHub/Notes/Main.qml</file>
     <file alias="EditorScreen.qml">C:/Users/Me/Documents/GitHub/Notes/EditorScreen.qml</file>
+    <file alias="EditorType.qml">C:/Users/Me/Documents/GitHub/Notes/EditorType.qml</file>
+    <file alias="SortNotes.qml">C:/Users/Me/Documents/GitHub/Notes/SortNotes.qml</file>
+    <file alias="SearchEditor.qml">C:/Users/Me/Documents/GitHub/Notes/SearchEditor.qml</file>
+    <file alias="FancyButton.qml">C:/Users/Me/Documents/GitHub/Notes/FancyButton.qml</file>
   </qresource>
 </RCC>
 

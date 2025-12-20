@@ -1,0 +1,156 @@
+{
+    "classes": [
+        {
+            "className": "DatabaseHandler",
+            "lineNumber": 11,
+            "object": true,
+            "qualifiedClassName": "DatabaseHandler",
+            "slots": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "loadAllNotes",
+                    "returnType": "QSqlQuery"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "id",
+                            "type": "int"
+                        },
+                        {
+                            "name": "title",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "desc",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "text",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "color",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "typeId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "typeName",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "date",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "updateNote",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "oldName",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "newName",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "color",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "renameNoteType",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "id",
+                            "type": "int"
+                        },
+                        {
+                            "name": "isFavorite",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 3,
+                    "name": "updateNoteFavorite",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "id",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 4,
+                    "name": "removeNote",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "index": 5,
+                    "name": "connectToDatabase",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "title",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "desc",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "text",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "color",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "typeId",
+                            "type": "int"
+                        },
+                        {
+                            "name": "typeName",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "date",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 6,
+                    "name": "addNote",
+                    "returnType": "int"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "DatabaseHandler.h",
+    "outputRevision": 69
+}

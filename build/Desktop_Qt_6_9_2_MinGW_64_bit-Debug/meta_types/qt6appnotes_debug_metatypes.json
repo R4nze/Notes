@@ -2,6 +2,162 @@
     {
         "classes": [
             {
+                "className": "DatabaseHandler",
+                "lineNumber": 11,
+                "object": true,
+                "qualifiedClassName": "DatabaseHandler",
+                "slots": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "loadAllNotes",
+                        "returnType": "QSqlQuery"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "int"
+                            },
+                            {
+                                "name": "title",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "desc",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "text",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "color",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "typeId",
+                                "type": "int"
+                            },
+                            {
+                                "name": "typeName",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "date",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "updateNote",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "oldName",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "newName",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "color",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 2,
+                        "name": "renameNoteType",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "int"
+                            },
+                            {
+                                "name": "isFavorite",
+                                "type": "bool"
+                            }
+                        ],
+                        "index": 3,
+                        "name": "updateNoteFavorite",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 4,
+                        "name": "removeNote",
+                        "returnType": "bool"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "connectToDatabase",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "title",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "desc",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "text",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "color",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "typeId",
+                                "type": "int"
+                            },
+                            {
+                                "name": "typeName",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "date",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "addNote",
+                        "returnType": "int"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "DatabaseHandler.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
                 "className": "NoteItem",
                 "lineNumber": 8,
                 "object": true,
@@ -95,6 +251,34 @@
                         "type": "QColor",
                         "user": false,
                         "write": "setColor"
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 6,
+                        "name": "id",
+                        "read": "id",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": true,
+                        "index": 7,
+                        "name": "isFavorite",
+                        "notify": "isFavoriteChanged",
+                        "read": "isFavorite",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false,
+                        "write": "setIsFavorite"
                     }
                 ],
                 "qualifiedClassName": "NoteItem",
@@ -134,6 +318,12 @@
                         "index": 5,
                         "name": "colorChanged",
                         "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 6,
+                        "name": "isFavoriteChanged",
+                        "returnType": "void"
                     }
                 ],
                 "superClasses": [
@@ -151,7 +341,7 @@
         "classes": [
             {
                 "className": "NotesManager",
-                "lineNumber": 9,
+                "lineNumber": 10,
                 "methods": [
                     {
                         "access": "public",
@@ -161,9 +351,49 @@
                                 "type": "NoteItem*"
                             }
                         ],
-                        "index": 10,
+                        "index": 16,
                         "name": "getTypeColor",
                         "returnType": "QColor"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 17,
+                        "name": "getColor",
+                        "returnType": "QColor"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "color",
+                                "type": "QColor"
+                            },
+                            {
+                                "name": "factor",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 18,
+                        "name": "getDarkerColor",
+                        "returnType": "QColor"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "colorCode",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 19,
+                        "name": "getTypeNameForColor",
+                        "returnType": "QString"
                     }
                 ],
                 "object": true,
@@ -292,7 +522,23 @@
                     },
                     {
                         "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "int"
+                            },
+                            {
+                                "name": "name",
+                                "type": "QString"
+                            }
+                        ],
                         "index": 5,
+                        "name": "changeType",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 6,
                         "name": "deleteSelectedNotes",
                         "returnType": "void"
                     },
@@ -304,7 +550,7 @@
                                 "type": "NoteItem*"
                             }
                         ],
-                        "index": 6,
+                        "index": 7,
                         "name": "addSelectedNote",
                         "returnType": "void"
                     },
@@ -316,8 +562,14 @@
                                 "type": "NoteItem*"
                             }
                         ],
-                        "index": 7,
+                        "index": 8,
                         "name": "removeSelectedNote",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 9,
+                        "name": "removeAllSelectedNote",
                         "returnType": "void"
                     },
                     {
@@ -328,8 +580,50 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 8,
+                        "index": 10,
                         "name": "sortByType",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "idOfType",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "sortByChoice",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "query",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 12,
+                        "name": "searchNotes",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "noteId",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "toggleFavorites",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 14,
+                        "name": "toggleSelectedFavorites",
                         "returnType": "void"
                     },
                     {
@@ -344,7 +638,7 @@
                                 "type": "QColor"
                             }
                         ],
-                        "index": 9,
+                        "index": 15,
                         "name": "getOrCreateTypeId",
                         "returnType": "int"
                     }
