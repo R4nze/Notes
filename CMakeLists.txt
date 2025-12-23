@@ -33,6 +33,16 @@ qt_add_qml_module(appNotes
         QML_FILES SearchEditor.qml
         SOURCES DatabaseHandler.h DatabaseHandler.cpp
         QML_FILES FancyButton.qml
+    RESOURCES
+        icons/addNotes.png
+        icons/search.png
+        icons/trash.png
+        icons/favorite.png
+        icons/LeftArrow.png
+        icons/cancel.png
+        fonts/DancingScript.ttf
+        QML_FILES SplashScreen.qml
+
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

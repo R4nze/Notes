@@ -12,6 +12,11 @@ Window {
     property bool isAddMode: false
     color: "#F4F6F9"
 
+    FontLoader{
+        id: dancingFont
+        source: "fonts/DancingScript.ttf"
+    }
+
     Flickable{ //Прокручивающаяся сетка заметок
         id: notesFlickable
         anchors{
@@ -166,7 +171,27 @@ Window {
                         Rectangle{
                         id: backRectangle
                         anchors.fill: parent
-                        color: notesManager.getDarkerColor(modelData.color, 140);
+                        //color: notesManager.getDarkerColor(modelData.color, 140);
+                        gradient: Gradient{
+                            GradientStop{
+                                position: 0.0
+                                color: Qt.lighter(modelData.color, 1.4)
+
+                            }
+                            GradientStop{
+                                position: 1.0
+                                color: modelData.color
+                            }
+                        }
+                        layer.enabled: true
+                        layer.effect: MultiEffect{
+                            shadowEnabled: true
+                            shadowColor: "#90000000"
+                            shadowBlur: 1.0
+                            shadowVerticalOffset: 4
+                            shadowHorizontalOffset: 0
+                        }
+
                         border.color: isSelectedItem && isDeleteMode ? "black" : "gray"
                         border.width: isSelectedItem && isDeleteMode ? 3 : 1
                         radius: 8
@@ -285,7 +310,7 @@ Window {
 
     Rectangle{ //Верхняя область для кнопок
         id: topBar
-        height: 95
+        height: 105
         anchors{
             top: parent.top
             left: parent.left
@@ -300,6 +325,21 @@ Window {
             shadowBlur: 1.0
             shadowVerticalOffset: 4
             shadowHorizontalOffset: 0
+        }
+
+        Text{
+            visible: !isDeleteMode
+            font.family: dancingFont.name
+            text: "<font color='#0575E6'>Ra</font>Nes"
+            textFormat: Text.RichText
+            font.pixelSize: 35
+            anchors{
+                top: topBar.top
+                left: topBar.left
+                topMargin: 6
+                leftMargin: 10
+            }
+
         }
     }
 
@@ -327,17 +367,18 @@ Window {
     FancyButton{ //Кнопка отмены режима выделения
         id: cancelDeleteModeButton
         visible: isDeleteMode
-        height: 25
-        width: 25
+        height: 30
+        width: 30
         radius: 8
         anchors{
             left: topBar.left
             top: topBar.top
             leftMargin: 8
-            topMargin: 10
+            topMargin: 15
         }
         startColor: "#FFB75E"
         endColor: "#ED8F03"
+        iconSource: "icons/cancel.png"
         onClicked: {
             isDeleteMode = !isDeleteMode
             notesManager.removeAllSelectedNote();
@@ -348,8 +389,8 @@ Window {
     FancyButton { //Кнопка добавления заметки в избранное
         id: favouritesButtons
         visible: isDeleteMode
-        width: 25
-        height: 25
+        width: 30
+        height: 30
         radius: 8
         anchors {
             right: bottomBar.right
@@ -360,7 +401,7 @@ Window {
         text: ""
         startColor: "#FF416C"
         endColor: "#FF4B2B"
-
+        iconSource: "icons/favorite.png"
         onClicked: {
             notesManager.toggleSelectedFavorites();
             isDeleteMode = !isDeleteMode
@@ -371,15 +412,16 @@ Window {
     FancyButton{ //Кнопка удаления заметки
         id: deleteButtom
         visible: isDeleteMode
-        height: 25
-        width: 25
+        height: 30
+        width: 30
         radius: 8
         anchors{
             left: bottomBar.left
             top: bottomBar.top
             leftMargin: 8
-            topMargin: 10
+            topMargin: 15
         }
+        iconSource: "icons/trash.png"
         startColor: "#485563"
         endColor: "#29323c"
         text: ""
@@ -391,17 +433,18 @@ Window {
 
     FancyButton{ //Кнопка добавления заметки
         id: addNotesButton
-        width: 55
-        height: 55
+        width: 50
+        height: 50
         radius: 180
         anchors{
             right: parent.right
             bottom: parent.bottom
-            rightMargin: 40
+            rightMargin: 30
             bottomMargin: 90
         }
         startColor: "#667eea"
         endColor: "#764ba2"
+        iconSource: "icons/addNotes.png"
         onClicked: {
             editorScreen.currentNote = null;
             if(isDeleteMode){
@@ -413,8 +456,8 @@ Window {
 
     FancyButton{ //Кнопка поиска
         id: seacrhButton
-        width: 25
-        height: 25
+        width: 30
+        height: 30
         radius: 8
         anchors{
             right: menuButton.left
@@ -422,6 +465,7 @@ Window {
             rightMargin: 15
             topMargin: 15
         }
+        iconSource: "icons/search.png"
         startColor: "#FF9966"
         endColor: "#FF5E62"
         onClicked: searchEditor.searchDialog.open()
@@ -460,8 +504,8 @@ Window {
 
     FancyButton{ //Кнопка меню
         id: menuButton
-        width: 25
-        height: 25
+        width: 30
+        height: 30
         text: "..."
         radius: 8
 
@@ -590,7 +634,7 @@ Window {
             bottomMargin: 13
             leftMargin: 8
         }
-        contentWidth: topBar.width + changeTypeButton.width
+        contentWidth: rowOfTypes.width + 10
         flickableDirection: Flickable.HorizontalFlick
         height: 30
         clip: true
@@ -600,6 +644,7 @@ Window {
             spacing: 10
             Repeater{
                 model: notesManager.typeModel
+
 
                 Rectangle{
                     id: rowRectangle
@@ -655,5 +700,8 @@ Window {
     }
     SearchEditor{
         id: searchEditor
+    }
+    SplashScreen{
+        id: splash
     }
 }

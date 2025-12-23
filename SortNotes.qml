@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls.Material
 import QtQuick.Layouts
+import QtQuick.Shapes 1.10
 Item {
     id: root
     height: 320
@@ -65,6 +66,9 @@ Item {
                     color: "white"
                     border.color: isSelected ? "blue" : buttonChoice.color
                     border.width: 2
+
+
+
                     Text{
                         anchors{
                             verticalCenter: parent.verticalCenter

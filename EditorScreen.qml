@@ -116,14 +116,14 @@ Item {
 
             ListModel {
                 id: myModel
-                ListElement { key: "Работа"; value: "#53ecec"}
-                ListElement { key: "Личное"; value: "#ee69b1" }
-                ListElement { key: "Другое"; value: "#db7093" }
-                ListElement { key: "Без названия"; value: "#90ee90"}
-                ListElement { key: "Без названия"; value: "#778899"}
-                ListElement { key: "Без названия"; value: "#fa8072"}
-                ListElement { key: "Без названия"; value: "#ff6347"}
-                ListElement { key: "Без названия"; value: "#ffff00"}
+                ListElement { key: "Работа"; value: "#4FC3F7"}
+                ListElement { key: "Личное"; value: "#FF8A80"}
+                ListElement { key: "Другое"; value: "#BA68C8"}
+                ListElement { key: "Идеи"; value: "#4DB6AC"}
+                ListElement { key: "Важное"; value: "#FFD54F"}
+                ListElement { key: "Здоровье"; value: "#AED581"}
+                ListElement { key: "Покупки"; value: "#FFB74D"}
+                ListElement { key: "Архив"; value: "#90A4AE"}
             }
 
             ComboBox {

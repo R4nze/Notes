@@ -15,7 +15,7 @@ Item {
 
 
         background: Rectangle {
-            color: "lightgrey"
+            color: "white"
             radius: 20 // Скругляем всё
 
             // Прямоугольник-"заплатка" снизу, чтобы убрать скругление там
@@ -24,7 +24,7 @@ Item {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 height: 15 // Высота равна радиусу
-                color: "lightgrey" // Цвет такой же, как у фона
+                color: "white" // Цвет такой же, как у фона
             }
         }
         header: Item{
@@ -34,26 +34,32 @@ Item {
             Text{
                 id: textOfChangeType
                 anchors{
+                    top: parent.top
+                    topMargin: 21
                     left: parent.left
                     verticalCenter: parent.verticalCenter
                     leftMargin: 20
                 }
-                font.bold: true
+                font.pixelSize: 15
                 text: "Изменение"
             }
-            MouseArea{
-                id: appliedButtom
-                width: 60;
-                height: 40
 
+            FancyButton{
                 anchors{
+                    top: parent.top
                     right: parent.right
-                    verticalCenter: parent.verticalCenter
                     rightMargin: 10
+                    topMargin: 17
                 }
+                startColor: "#E0E0E0"
+                endColor: "#E0E0E0"
+                width: 75;
+                height: 28
+                radius: 8
                 Text{
                     anchors.centerIn: parent
-                    color: "blue"
+                    color: "black"
+                    font.pixelSize: 15
                     text: "Готово"
                 }
                 onClicked: {
@@ -64,6 +70,7 @@ Item {
                     typeChangeDialog.close()
 
                 }
+
             }
         }
         contentItem: Flickable{
@@ -85,7 +92,7 @@ Item {
                         id: typeField
                         property int idField: modelData.id
                         height: 35
-                        width: parent.width - 40
+                        width: parent.width
                         anchors.horizontalCenter: parent.horizontalCenter
 
                         text: modelData.nameOfType
@@ -104,7 +111,18 @@ Item {
                             width: 10
                             height: 10
                             radius: 180
-                            color: modelData.nameOfColor
+
+                            gradient: Gradient{
+                                GradientStop{
+                                    position:0.0
+                                    color: modelData.nameOfColor
+                                }
+                                GradientStop{
+                                    position:1.0
+                                    color: Qt.darker(modelData.nameOfColor)
+                                }
+                            }
+
 
                         }
                     }
